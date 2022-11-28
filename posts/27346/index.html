@@ -20,12 +20,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>将GitHub仓库设为图床，并使用又拍云加速 - MerryJingle</title>
+  <title>GitHub图床搭配使用又拍云CDN - MerryJingle</title>
 
   
     <meta name="description" content="具体步骤  原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过xxx.github.io&#x2F;images&#x2F;xxx.png访问这个仓库中的图片，现在通过自定义域名images_0.example.com&#x2F;images&#x2F;xxx.png访问，将images_0.example.com做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将GitHub仓库设为图床，并使用又拍云加速">
+<meta property="og:title" content="GitHub图床搭配使用又拍云CDN">
 <meta property="og:url" content="https://blog.pengfeima.cn/posts/27346/index.html">
 <meta property="og:site_name" content="MerryJingle">
 <meta property="og:description" content="具体步骤  原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过xxx.github.io&#x2F;images&#x2F;xxx.png访问这个仓库中的图片，现在通过自定义域名images_0.example.com&#x2F;images&#x2F;xxx.png访问，将images_0.example.com做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211647289.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211822833.png">
 <meta property="article:published_time" content="2022-11-23T05:16:21.000Z">
-<meta property="article:modified_time" content="2022-11-24T13:28:49.481Z">
+<meta property="article:modified_time" content="2022-11-28T15:47:18.049Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">将GitHub仓库设为图床，并使用又拍云加速</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 具体步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">GitHub图床搭配使用又拍云CDN</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 具体步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
 
 
 
@@ -124,10 +124,10 @@ var _hmt = _hmt || [];
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-23T05:16:21.000Z">2022-11-23</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-23T05:16:21.000Z">2022-11-23</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>将GitHub仓库设为图床，并使用又拍云加速</span></h1>
+<h1 class="article-title"><span>GitHub图床搭配使用又拍云CDN</span></h1>
 <h2 id="具体步骤"><a class="markdownIt-Anchor" href="#具体步骤"></a> 具体步骤</h2>
 <blockquote>
 <p>原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。<a target="_blank" rel="noopener" href="http://xn--xxx-vs9d18tff8h786ef9dkn3hr3ubp2a320exrd.github.io/images/xxx.png%E8%AE%BF%E9%97%AE%E8%BF%99%E4%B8%AA%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%8C%E7%8E%B0%E5%9C%A8%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8Dimages_0.example.com/images/xxx.png%E8%AE%BF%E9%97%AE%EF%BC%8C%E5%B0%86images_0.example.com%E5%81%9A%E4%B8%80%E4%B8%8BCDN%E5%8A%A0%E9%80%9F%EF%BC%8C%E8%BF%99%E6%A0%B7%E5%B0%B1%E8%83%BD%E5%9C%A8%E5%9B%BD%E5%86%85%E5%BF%AB%E9%80%9F%E8%AE%BF%E9%97%AE%E8%BF%99%E4%BA%9B%E8%B5%84%E6%BA%90%E4%BA%86%E3%80%82%E5%A6%82%E6%9E%9C%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E6%BB%A1%E4%BA%86%E5%8F%AF%E4%BB%A5%E5%86%8D%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%EF%BC%8C%E4%BE%8B%E5%A6%82images_1%EF%BC%8Cimages_2%E7%AD%89%E7%AD%89%EF%BC%8C%E7%BB%91%E5%AE%9A%E6%96%B0%E7%9A%84%E5%9F%9F%E5%90%8D%E5%8D%B3%E5%8F%AF%E3%80%82%E4%BB%A5%E5%90%8E%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%83%B3%E7%94%A8github%E5%9B%BE%E5%BA%8A%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%81%E7%A7%BB%EF%BC%8C%E5%8F%AA%E8%A6%81%E5%B0%86%E5%9F%9F%E5%90%8D%E5%92%8C%E4%BB%93%E5%BA%93%E7%9B%B8%E5%AF%B9%E5%BA%94%E5%8D%B3%E5%8F%AF">发布静态网页后可以通过xxx.github.io/images/xxx.png访问这个仓库中的图片，现在通过自定义域名images_0.example.com/images/xxx.png访问，将images_0.example.com做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓库，例如images_1，images_2等等，绑定新的域名即可。以后如果不想用github图床，可以迁移，只要将域名和仓库相对应即可</a></p>
