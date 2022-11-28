@@ -194,10 +194,32 @@
     
     <entry>
       <title></title>
-      <link href="/html/music.html"/>
-      <url>/html/music.html</url>
+      <link href="/index.html"/>
+      <url>/index.html</url>
       
-        <content type="html"><![CDATA[<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head>    <h1>显示了吗？</h1><body><!--添加音频播放，设置为自动播放,并隐藏播放控件的显示--><audio controls="controls" autoplay="autoplay" controls="controls" hidden="hidden"><source src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Christopher%20Larkin%20-%20The%20White%20Lady.mp3" type="audio/mp3"></audio><center><audio autoplay="autoplay" loop="loop" style="width:auto;" src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Rainy%20Mood.mp3" controls muted ></audio><audio autoplay="autoplay" loop="loop" style="width:auto;" src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Christopher%20Larkin%20-%20The%20White%20Lady.mp3" controls muted ></audio></center></body></html>]]></content>
+        <content type="html"><![CDATA[<div class="tag-plugin note" ><div class="body"><div class="tag-plugin image"><div class="image-bg" style="padding:40px;"><img src="/img/logo_white.png" style="width:300px;"/></div></div><center><a href="https://blog.pengfeima.cn/">MerryJingle</a>，快乐的铃铛，为毕业发愁中，会点C++和CUDA，研究流固耦合问题</center><div class="tag-plugin tabs" align="center"id="tab_2""><ul class="nav-tabs"><li class="tab active"><a href="#tab_2-1">遗忘十字路</a></li><li class="tab"><a href="#tab_2-2">王国边缘</a></li><li class="tab"><a href="#tab_2-3">皇后花园</a></li><li class="tab"><a href="#tab_2-4">国王驿站</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><p>遗忘十字路</p>  <div class="tag-plugin swiper-container" id="swiper-api" width="max"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180033899.jpeg" alt="WechatIMG2" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032716.jpeg" alt="WechatIMG22" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032707.jpeg" alt="WechatIMG20" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180033325.jpeg" alt="WechatIMG18" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032668.jpeg" alt="WechatIMG16" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032703.jpeg" alt="WechatIMG12" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032457.jpeg" alt="WechatIMG10" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032651.jpeg" alt="WechatIMG8" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032149.jpeg" alt="WechatIMG6" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032787.jpeg" alt="WechatIMG4" /></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div></div><div class="tab-pane" id="tab_2-2"><p>王国边缘</p></div><div class="tab-pane" id="tab_2-3"><p>皇后花园</p></div><div class="tab-pane" id="tab_2-4"><p>国王驿站</p></div></div></div> </div></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="tag-plugin tabs" align="center"id="tab_3""><ul class="nav-tabs"><li class="tab active"><a href="#tab_3-1">最近动态</a></li><li class="tab"><a href="#tab_3-2">建站日志</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_3-1"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/shaoyaoqian/MerryJingle/issues" user="shaoyaoqian"></div></div><div class="tab-pane" id="tab_3-2"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/shaoyaoqian/MerryJingle-timeline-schedule/issues" user="shaoyaoqian"></div>  <div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header"><p>Thu Nov 17 2022</p></div><div class="body fs14"><ul><li>现在我的网站差不多能看了🥳</li><li>研究了一下我在用的Stellar主题，发现wiki功能设计得特别好。</li></ul></div></div><div class="timenode" index="1"><div class="header"><p>Wen Nov 16 2022</p></div><div class="body fs14"><ul><li>ICP备案通过了审核，<a href="http://xn--pengfeima-fv8of05ajj7b.cn">域名是pengfeima.cn</a></li><li>在GitHub上偶然认识了<a href="https://skyreeves.cn">skyreeves</a>发现他的博客很好看，于是兴致勃勃地想做一个</li></ul></div></div><div class="timenode" index="2"><div class="header"><p>Mon Nov 14 2022</p></div><div class="body fs14"><p>搭建了GitHub图床，将域名解析服务器更改为cloudflare，白嫖cloudflare的CDN服务，虽然还是有点慢😣但是比直接用GitHub的链接快多了</p></div></div><div class="timenode" index="3"><div class="header"><p>Mon Nov 07 2022</p></div><div class="body fs14"><ul><li>叫妈妈帮忙注册了一个阿里云账号，然后用很优惠的价格购买了一台一年的轻量服务器🥳</li><li>提交了ICP备案申请，打算搭建个网站</li></ul></div></div></div></div></div></div> ]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>朋友圈</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="tag-plugin note" ><div class="body"><div class="tag-plugin users-wrap"><div class="stellar-friends-api" api="https://api.vlts.cc/output_data/v2/shaoyaoqian/blog-neighbours"><div class="group-body"></div></div></div></div></div><h2 id="他们在干什么呀~"><a class="markdownIt-Anchor" href="#他们在干什么呀~"></a> 他们在干什么呀~</h2><div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>Xaoxuu</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline/issues?per_page=3"></div></div></details><details class="folder" index="1"><summary><span>Skyreeves</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/skyreeves/blog-timeline-svsvnm/issues?per_page=3"></div></div></details><details class="folder" index="2"><summary><span>是非题</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/i-abc/blog-timeline/issues?per_page=3"></div></div></details><details class="folder" index="3"><summary><span>星日语</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/weekdaycare/weekdaycare.github.io/issues?per_page=3"></div></div></details></div><h2 id="添加友链的方法"><a class="markdownIt-Anchor" href="#添加友链的方法"></a> 添加友链的方法</h2><div class="tag-plugin note" ><div class="body"><div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header"><p>第一步：新建 Issue</p></div><div class="body fs14"><p>新建<a href="https://github.com/shaoyaoqian/blog-neighbours/issues">GitHub Issue</a>按照模板格式填写并提交。</p><p>为了提高图片加载速度，建议优化头像：</p><ol><li>打开<a href="https://www.yasuotu.com/">压缩图</a>上传自己的头像，将图片尺寸调整到 <code>96px</code> 后下载。</li><li>将压缩后的图片上传到<a href="https://7bu.top/">去不图床</a>并使用此图片链接作为头像。</li></ol></div></div><div class="timenode" index="1"><div class="header"><p>第二步：添加友链并等待管理员审核</p></div><div class="body fs14"><p>请添加本站到您的友链中，如果您也使用 issue 作为友链源，只需要告知您的友链源仓库即可。</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">MerryJingle</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">https://avatars.githubusercontent.com/u/115222128</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://blog.pengfeima.cn/</span></span><br><span class="line"><span class="attr">screenshot:</span> <span class="string">https://githubimages.pengfeima.cn/images/202211172254234.png</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">快乐的铃铛</span></span><br></pre></td></tr></table></figure><p>待管理员添加 <code>active</code> 标签后即可生效。</p></div></div></div></div></div><p>如果您需要更新自己的友链，请直接修改 issue 内容，大约 3 分钟内生效，无需等待博客更新。如果无法修改，可以重新创建一个。</p>]]></content>
       
     </entry>
     
@@ -226,22 +248,44 @@
     
     
     <entry>
-      <title>站点美化点点滴滴</title>
-      <link href="/wiki/notes/index.html"/>
-      <url>/wiki/notes/index.html</url>
+      <title>Hello Wordfadfadsfald</title>
+      <link href="/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A04.html"/>
+      <url>/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A04.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>大风的法俄大额jjjj</p><h2 id="fadfa"><a class="markdownIt-Anchor" href="#fadfa"></a> fadfa</h2><p>dfafefd</p><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/Huxpro/huxpro.github.io/issues?per_page=2"></div><p>学长大啊</p><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline/issues?per_page=2" user="xaoxuu"></div><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline-schedule/issuesper_page=2"><div class="timenode" index="0"><div class="header"><p>这条内容为静态数据</p></div><div class="body fs14"><p>这条内容为静态数据，静态数据在 <code>deploy</code> 时就已经确定了。</p></div></div></div><div class="tag-plugin swiper-container" id="swiper-api" width="min"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ss</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">0</span></span><br></pre></td></tr></table></figure><blockquote><p>vunn<br />ukhuhhjbjhkbk,n,’</p></blockquote><div class="tag-plugin note" ><div class="title"><strong>[kjnhby]</strong></div><div class="body"><p>content [color:red]</p></div></div><p><a href="https://www.skyreeves.cn/">SkyReeves</a></p><p><a href="https://www.skyreeves.cn/post/9b8cc433.html">Stellar主题自定义侧边栏教程「萌新向」</a></p><p><img src="https://githubimages.pengfeima.cn/images/202211171224686.png" alt="image-20221117122400556" /></p><p>wiki的作用：</p><p><a href="http://www.example.com/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A03.html">http://www.example.com/notes/站点美化/文章3.html</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="文章1"><a class="markdownIt-Anchor" href="#文章1"></a> 文章1</h2>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>朋友圈</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>Hello Wordfadfadsfald</title>
+      <link href="/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html"/>
+      <url>/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html</url>
       
-        <content type="html"><![CDATA[<div class="tag-plugin note" ><div class="body"><div class="tag-plugin users-wrap"><div class="stellar-friends-api" api="https://api.vlts.cc/output_data/v2/shaoyaoqian/blog-neighbours"><div class="group-body"></div></div></div></div></div><h2 id="他们在干什么呀~"><a class="markdownIt-Anchor" href="#他们在干什么呀~"></a> 他们在干什么呀~</h2><div class="tag-plugin folders" ><details class="folder" index="0"><summary><span>Xaoxuu</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline/issues?per_page=3"></div></div></details><details class="folder" index="1"><summary><span>Skyreeves</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/skyreeves/blog-timeline-svsvnm/issues?per_page=3"></div></div></details><details class="folder" index="2"><summary><span>是非题</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/i-abc/blog-timeline/issues?per_page=3"></div></div></details><details class="folder" index="3"><summary><span>星日语</span></summary><div class="body">  <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/weekdaycare/weekdaycare.github.io/issues?per_page=3"></div></div></details></div><h2 id="添加友链的方法"><a class="markdownIt-Anchor" href="#添加友链的方法"></a> 添加友链的方法</h2><div class="tag-plugin note" ><div class="body"><div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header"><p>第一步：新建 Issue</p></div><div class="body fs14"><p>新建<a href="https://github.com/shaoyaoqian/blog-neighbours/issues">GitHub Issue</a>按照模板格式填写并提交。</p><p>为了提高图片加载速度，建议优化头像：</p><ol><li>打开<a href="https://www.yasuotu.com/">压缩图</a>上传自己的头像，将图片尺寸调整到 <code>96px</code> 后下载。</li><li>将压缩后的图片上传到<a href="https://7bu.top/">去不图床</a>并使用此图片链接作为头像。</li></ol></div></div><div class="timenode" index="1"><div class="header"><p>第二步：添加友链并等待管理员审核</p></div><div class="body fs14"><p>请添加本站到您的友链中，如果您也使用 issue 作为友链源，只需要告知您的友链源仓库即可。</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">MerryJingle</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">https://avatars.githubusercontent.com/u/115222128</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://blog.pengfeima.cn/</span></span><br><span class="line"><span class="attr">screenshot:</span> <span class="string">https://githubimages.pengfeima.cn/images/202211172254234.png</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">快乐的铃铛</span></span><br></pre></td></tr></table></figure><p>待管理员添加 <code>active</code> 标签后即可生效。</p></div></div></div></div></div><p>如果您需要更新自己的友链，请直接修改 issue 内容，大约 3 分钟内生效，无需等待博客更新。如果无法修改，可以重新创建一个。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="文章1"><a class="markdownIt-Anchor" href="#文章1"></a> 文章1</h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/html/music.html"/>
+      <url>/html/music.html</url>
+      
+        <content type="html"><![CDATA[<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title></head>    <h1>显示了吗？</h1><body><!--添加音频播放，设置为自动播放,并隐藏播放控件的显示--><audio controls="controls" autoplay="autoplay" controls="controls" hidden="hidden"><source src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Christopher%20Larkin%20-%20The%20White%20Lady.mp3" type="audio/mp3"></audio><center><audio autoplay="autoplay" loop="loop" style="width:auto;" src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Rainy%20Mood.mp3" controls muted ></audio><audio autoplay="autoplay" loop="loop" style="width:auto;" src="https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/Christopher%20Larkin%20-%20The%20White%20Lady.mp3" controls muted ></audio></center></body></html>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>站点美化点点滴滴</title>
+      <link href="/wiki/notes/index.html"/>
+      <url>/wiki/notes/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>大风的法俄大额jjjj</p><h2 id="fadfa"><a class="markdownIt-Anchor" href="#fadfa"></a> fadfa</h2><p>dfafefd</p><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/Huxpro/huxpro.github.io/issues?per_page=2"></div><p>学长大啊</p><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline/issues?per_page=2" user="xaoxuu"></div><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/xaoxuu/blog-timeline-schedule/issuesper_page=2"><div class="timenode" index="0"><div class="header"><p>这条内容为静态数据</p></div><div class="body fs14"><p>这条内容为静态数据，静态数据在 <code>deploy</code> 时就已经确定了。</p></div></div></div><div class="tag-plugin swiper-container" id="swiper-api" width="min"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div><div class="swiper-slide"><img no-lazy src="https://www.pengfeima.cn/img/home-bg-1.jpeg" alt="" /></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ss</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">0</span></span><br></pre></td></tr></table></figure><blockquote><p>vunn<br />ukhuhhjbjhkbk,n,’</p></blockquote><div class="tag-plugin note" ><div class="title"><strong>[kjnhby]</strong></div><div class="body"><p>content [color:red]</p></div></div><p><a href="https://www.skyreeves.cn/">SkyReeves</a></p><p><a href="https://www.skyreeves.cn/post/9b8cc433.html">Stellar主题自定义侧边栏教程「萌新向」</a></p><p><img src="https://githubimages.pengfeima.cn/images/202211171224686.png" alt="image-20221117122400556" /></p><p>wiki的作用：</p><p><a href="http://www.example.com/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A03.html">http://www.example.com/notes/站点美化/文章3.html</a></p>]]></content>
       
     </entry>
     
@@ -260,52 +304,8 @@
     
     <entry>
       <title>Hello Wordfadfadsfald</title>
-      <link href="/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A04.html"/>
-      <url>/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A04.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="文章1"><a class="markdownIt-Anchor" href="#文章1"></a> 文章1</h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello Wordfadfadsfald</title>
       <link href="/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A03.html"/>
       <url>/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A03.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="文章1"><a class="markdownIt-Anchor" href="#文章1"></a> 文章1</h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<div class="tag-plugin tabs" align="center"id="tab_2""><ul class="nav-tabs"><li class="tab active"><a href="#tab_2-1">最近动态</a></li><li class="tab"><a href="#tab_2-2">建站日志</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/shaoyaoqian/MerryJingle/issues" user="shaoyaoqian"></div></div><div class="tab-pane" id="tab_2-2"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/shaoyaoqian/MerryJingle-timeline-schedule/issues" user="shaoyaoqian"></div>  <div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header"><p>Thu Nov 17 2022</p></div><div class="body fs14"><ul><li>现在我的网站差不多能看了🥳</li><li>研究了一下我在用的Stellar主题，发现wiki功能设计得特别好。</li></ul></div></div><div class="timenode" index="1"><div class="header"><p>Wen Nov 16 2022</p></div><div class="body fs14"><ul><li>ICP备案通过了审核，<a href="http://xn--pengfeima-fv8of05ajj7b.cn">域名是pengfeima.cn</a></li><li>在GitHub上偶然认识了<a href="https://skyreeves.cn">skyreeves</a>发现他的博客很好看，于是兴致勃勃地想做一个</li></ul></div></div><div class="timenode" index="2"><div class="header"><p>Mon Nov 14 2022</p></div><div class="body fs14"><p>搭建了GitHub图床，将域名解析服务器更改为cloudflare，白嫖cloudflare的CDN服务，虽然还是有点慢😣但是比直接用GitHub的链接快多了</p></div></div><div class="timenode" index="3"><div class="header"><p>Mon Nov 07 2022</p></div><div class="body fs14"><ul><li>叫妈妈帮忙注册了一个阿里云账号，然后用很优惠的价格购买了一台一年的轻量服务器🥳</li><li>提交了ICP备案申请，打算搭建个网站</li></ul></div></div></div></div></div></div> ]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/index.html"/>
-      <url>/index.html</url>
-      
-        <content type="html"><![CDATA[<div class="tag-plugin note" ><div class="body"><div class="tag-plugin image"><div class="image-bg" style="padding:40px;"><img src="/img/logo_white.png" style="width:300px;"/></div></div><center><a href="https://blog.pengfeima.cn/">MerryJingle</a>，快乐的铃铛，为毕业发愁中，会点C++和CUDA，研究流固耦合问题</center><div class="tag-plugin tabs" align="center"id="tab_3""><ul class="nav-tabs"><li class="tab active"><a href="#tab_3-1">遗忘十字路</a></li><li class="tab"><a href="#tab_3-2">王国边缘</a></li><li class="tab"><a href="#tab_3-3">皇后花园</a></li><li class="tab"><a href="#tab_3-4">国王驿站</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_3-1"><p>遗忘十字路</p>  <div class="tag-plugin swiper-container" id="swiper-api" width="max"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180033899.jpeg" alt="WechatIMG2" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032716.jpeg" alt="WechatIMG22" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032707.jpeg" alt="WechatIMG20" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180033325.jpeg" alt="WechatIMG18" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032668.jpeg" alt="WechatIMG16" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032703.jpeg" alt="WechatIMG12" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032457.jpeg" alt="WechatIMG10" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032651.jpeg" alt="WechatIMG8" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032149.jpeg" alt="WechatIMG6" /></div><div class="swiper-slide"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211180032787.jpeg" alt="WechatIMG4" /></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div></div><div class="tab-pane" id="tab_3-2"><p>王国边缘</p></div><div class="tab-pane" id="tab_3-3"><p>皇后花园</p></div><div class="tab-pane" id="tab_3-4"><p>国王驿站</p></div></div></div> </div></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello Wordfadfadsfald</title>
-      <link href="/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html"/>
-      <url>/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html</url>
       
         <content type="html"><![CDATA[<h2 id="文章1"><a class="markdownIt-Anchor" href="#文章1"></a> 文章1</h2>]]></content>
       
