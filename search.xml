@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>为开源项目提交commit的简易教程</title>
+      <link href="/posts/26834/"/>
+      <url>/posts/26834/</url>
+      
+        <content type="html"><![CDATA[<p>简介：</p><span id="more"></span><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>今天给Stellar主题增加了一个功能，想提交到上游仓库的主分支上，因此开了一个pull request。这是我第一次使用pull request，总结了以下一些经验。</p><p>我自己在本地修改代码调试程序时，commit命令用得会比较频繁，而且会在代码中加入一些私货。我希望在pull request的时候只挑选出某些commit，将它们合并成一个commit再将它推送到上游仓库。</p><p>不写了不写了不写了，直接写步骤吧～</p><ol><li>fetch 拉取上游仓库的主分支，将它更新到最新状态</li><li>在 upstream/main 处创建并签出一个分支</li><li>使用 cherry-pick 选取希望推送的commit</li><li>使用 rebase 将这些分支合并，并改写message</li><li>在 github 上开启一个 pull requst 等待作者审阅代码</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CFD问题中的稳定性分析</title>
       <link href="/posts/55132/"/>
       <url>/posts/55132/</url>

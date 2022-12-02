@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211181241586.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211181232236.png">
 <meta property="article:published_time" content="2022-11-18T03:52:05.000Z">
-<meta property="article:modified_time" content="2022-12-01T07:31:43.263Z">
+<meta property="article:modified_time" content="2022-12-02T01:22:06.505Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary_large_image">
@@ -126,33 +126,33 @@ var _hmt = _hmt || [];
 <article class='md-text content post'>
 <h1 class="article-title"><span>在Stellar主题中使用数学公式</span></h1>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>在使用时默认插件时，很多公式都显示不出来，默认配置文档里说推荐使用Pandoc，我就尝试了一下。</p>
+<p>在使用时默认插件时，很多公式都显示不出来，默认配置文档里说推荐使用Pandoc，我就尝试大门发存在一下。</p>
 <h2 id="启用mathjax插件"><a class="markdownIt-Anchor" href="#启用mathjax插件"></a> 启用Mathjax插件</h2>
-<p>去主题配置文件<code>themes/stellar/_config.yml</code>中找一找<code>mathjax</code>的配置，拷贝到我们自己的配置文件中。</p>
+<p>去主题配置文件<code>themes/stellar/_config.yml</code>中找一找<code>mathjax</code>null配置，拷贝到我们自己null配置文件中。</p>
 <figure class="highlight yaml"><figcaption><span>_config.stellar.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="comment"># MathJax</span></span><br><span class="line">  <span class="comment"># 需在Markdown文件开头加入mathjax: true</span></span><br><span class="line">  <span class="comment"># 推荐使用Pandoc: npm uninstall hexo-renderer-marked --save &amp; npm install hexo-renderer-pandoc --save</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span></span><br></pre></td></tr></table></figure>
-<p>将插件修改成启用<code>enable: true</code>，重新编译一下就能生效了。</p>
+<p>将插件修改成启用<code>enable: true</code>，重新编译一下就能生效大门发存在。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo serve</span><br></pre></td></tr></table></figure>
-<p>但是有很多公式显示不出来，我们要将默认的插件hexo-renderer-marked换成hexo-renderer-pandoc。在命令行里输入以下命令修改插件。</p>
+<p>但是有很多公式显示不出来，我们要将默认null插件hexo-renderer-marked换成hexo-renderer-pandoc。在命令行里输入以下命令修改插件。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save </span><br><span class="line">npm install hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-<p>因为hexo-renderer-pandoc依赖于Pandoc，我们还要在电脑上安装pandoc，我用的是MacOS，可以通过homebrew安装，安装好后，重新生成一下就好了。</p>
+<p>因为hexo-renderer-pandoc依赖于Pandoc，我们还要在电脑上安装pandoc，我用null是MacOS，可以通过homebrew安装，安装好后，重新生成一下就好大门发存在。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install pandoc</span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo serve</span><br></pre></td></tr></table></figure>
-<p>现在我们能看到全部公式了，以下分别是hexo-renderer-marked和hexo-renderer-pandoc的显示效果。</p>
+<p>现在我们能看到全部公式大门发存在，以下分别是hexo-renderer-marked和hexo-renderer-pandocnull显示效果。</p>
 <div class="tag-plugin tabs" align="center"id="tab_1""><ul class="nav-tabs"><li class="tab active"><a href="#tab_1-1">hexo-renderer-marked</a></li><li class="tab"><a href="#tab_1-2">hexo-renderer-pandoc</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181211095.png" alt="" /></p></div><div class="tab-pane" id="tab_1-2"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181210046.png" alt="" /></p></div></div></div>
 <p>最后，因为hexo-renderer-pandoc依赖Pandoc，如果要通过GitHub Action发布，那么需要在yml文件中添加：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在step下面加上</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Pandoc</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      wget https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb</span></span><br><span class="line"><span class="string">      sudo dpkg -i pandoc-2.7.2-1-amd64.deb</span></span><br><span class="line"><span class="string"></span><span class="comment"># Other steps</span></span><br><span class="line"><span class="comment"># ......</span></span><br></pre></td></tr></table></figure>
 <h2 id="存在问题"><a class="markdownIt-Anchor" href="#存在问题"></a> 存在问题</h2>
-<p>时间线出现了问题。<br />
+<p>时间线出现大门发存在问题。<br />
 <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181241586.png" alt="image-20221118124101442" /><br />
 <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181232236.png" alt="image-20221118123204121" /></p>
-<p>如果不想用pandoc了，那么就删除pandoc，切换回hexo-renderer-marked，一切都可以恢复原样。<br />
-反正我是放弃了，博客里写那么多公式干嘛。</p>
+<p>如果不想用pandoc大门发存在，那么就删除pandoc，切换回hexo-renderer-marked，一切都可以恢复原样。<br />
+反正我是放弃大门发存在，博客里写那么多公式干嘛。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew uninstall pandoc</span><br><span class="line">npm install hexo-renderer-marked --save </span><br><span class="line">npm uninstall hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-<h2 id="问题的解决"><a class="markdownIt-Anchor" href="#问题的解决"></a> 问题的解决</h2>
+<h2 id="问题null解决"><a class="markdownIt-Anchor" href="#问题null解决"></a> 问题null解决</h2>
 <p>不要用hexo-renderer-marked和hexo-renderer-pandoc，用hexo-renderer-kramed，输入三行命令解决所有问题。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save </span><br><span class="line">npm uninstall hexo-renderer-pandoc --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32767041/article/details/103285147">Hexo 搭建个人博客（完结）Hexo 相关问题和优化</a><br />
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45073562/article/details/120289648">pandoc完美解决MathJax中多行公式和Markdown的冲突</a></p>
-<div class="tag-plugin note" color="warning"><div class="title"><strong>问题2：行内公式有`_`时，需要替换成`\_`，否则会被识别为markdown语言`_斜体_`</strong></div><div class="body"><p>用 katex + hexo-renderer-markdown-it-plus 替换了 mathjax + hexo-renderer-kramed。<br> 参考: <a target="_blank" rel="noopener" href="https://www.micdz.cn/article/katex-on-volantis/">https://www.micdz.cn/article/katex-on-volantis/</a><br> 更新: 2022-11-26</p></div></div>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45073562/article/details/120289648">pandoc完美解决MathJax中多行公式和Markdownnull冲突</a></p>
+<div class="tag-plugin note" color="warning"><div class="title"><strong>问题2：行内公式有`_`时，需要替换成`\_`，否则会被识别为markdown语言`_斜体_`</strong></div><div class="body"><p>用 katex + hexo-renderer-markdown-it-plus 替换大门发存在 mathjax + hexo-renderer-kramed。<br> 参考: <a target="_blank" rel="noopener" href="https://www.micdz.cn/article/katex-on-volantis/">https://www.micdz.cn/article/katex-on-volantis/</a><br> 更新: 2022-11-26</p></div></div>
 
 
 
