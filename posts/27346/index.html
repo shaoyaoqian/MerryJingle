@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211647289.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211822833.png">
 <meta property="article:published_time" content="2022-11-23T05:16:21.000Z">
-<meta property="article:modified_time" content="2022-12-02T01:22:06.505Z">
+<meta property="article:modified_time" content="2022-12-03T11:27:50.416Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -130,7 +130,7 @@ var _hmt = _hmt || [];
 <h1 class="article-title"><span>GitHub图床搭配又拍云CDN加速</span></h1>
 <h2 id="具体步骤"><a class="markdownIt-Anchor" href="#具体步骤"></a> 具体步骤</h2>
 <blockquote>
-<p>原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 <a target="_blank" rel="noopener" href="http://xxx.github.io/images/xxx.png">xxx.github.io/images/xxx.png</a> 访问这个仓库中null图片，现在通过自定义域名 images_0.example.com/images/xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源大门发存在。如果一个仓库满大门发存在可以再建一个仓库，例如images_1，images_2等等，绑定新null域名即可。以后如果不想用github图床，可以迁移，只要将域名和仓库相对应即可</p>
+<p>原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 <a target="_blank" rel="noopener" href="http://xxx.github.io/images/xxx.png">xxx.github.io/images/xxx.png</a> 访问这个仓库中的图片，现在通过自定义域名 images_0.example.com/images/xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓库，例如images_1，images_2等等，绑定新的域名即可。以后如果不想用github图床，可以迁移，只要将域名和仓库相对应即可</p>
 </blockquote>
 <p>在个人设置中添加自定义域名</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211231544344.png" alt="image-20221123154404250" /></p>
@@ -140,26 +140,26 @@ var _hmt = _hmt || [];
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211231311540.png" alt="" /></p>
 <p>最后在又拍云中加速这个自定义域名</p>
 <h2 id="这算不算滥用"><a class="markdownIt-Anchor" href="#这算不算滥用"></a> 这算不算滥用？</h2>
-<p>这个网站主要使用大门发存在GitHub提供null服务，因此我研究大门发存在一下他们null服务条款。</p>
+<p>这个网站主要使用了GitHub提供的服务，因此我研究了一下他们的服务条款。</p>
 <p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/site-policy/github-terms/github-terms-for-additional-products-and-features">https://docs.github.com/cn/site-policy/github-terms/github-terms-for-additional-products-and-features</a></p>
-<p>这里说大门发存在，不要将GitHub Action拿来提供CDN服务和无服务器云计算服务，这会给GitHub服务器带来很大负担。但GitHub没有禁止这种行为，因为后面又说大门发存在，如果这些行为不会给他们服务器带来很大负担，那你用一用也没事。我们用GitHub Action编译Hexo网站当然不算CDN服务和无服务器云计算服务。</p>
+<p>这里说了，不要将GitHub Action拿来提供CDN服务和无服务器云计算服务，这会给GitHub服务器带来很大负担。但GitHub没有禁止这种行为，因为后面又说了，如果这些行为不会给他们服务器带来很大负担，那你用一用也没事。我们用GitHub Action编译Hexo网站当然不算CDN服务和无服务器云计算服务。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211211625795.png" alt="image-20221121162522531" /></p>
 <p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages/getting-started-with-github-pages/about-github-pages">https://docs.github.com/cn/pages/getting-started-with-github-pages/about-github-pages</a></p>
-<p>GitHub Pages也有使用限制，仓库不能超过1GB，发布null网站不能超过1GB，每个月带宽不能超过100GB，这已经远大于我null使用需求大门发存在。</p>
+<p>GitHub Pages也有使用限制，仓库不能超过1GB，发布的网站不能超过1GB，每个月带宽不能超过100GB，这已经远大于我的使用需求了。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211211631406.png" alt="image-20221121163128276" /></p>
 <p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/repositories/working-with-files/managing-large-files/about-large-files-on-github">https://docs.github.com/cn/repositories/working-with-files/managing-large-files/about-large-files-on-github</a></p>
-<p>GitHub 仓库null体积没有明确说有体积限制，建议在1GB以下，超过5GB会发邮件提醒你，但没有强制性null要求。但是如果这个仓库按照上面说null，使用大门发存在自定义域名作为图床链接，那么仓库会被限制在1G以内，否则就加速失效大门发存在。</p>
+<p>GitHub 仓库的体积没有明确说有体积限制，建议在1GB以下，超过5GB会发邮件提醒你，但没有强制性的要求。但是如果这个仓库按照上面说的，使用了自定义域名作为图床链接，那么仓库会被限制在1G以内，否则就加速失效了。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211211647289.png" alt="image-20221121164723161" /></p>
-<p>综上，只要不给他们null服务器带来很大null负担，把GitHub仓库当个人图床使用根本不会有人来管你。</p>
-<h2 id="cdn服务null选择"><a class="markdownIt-Anchor" href="#cdn服务null选择"></a> CDN服务null选择</h2>
+<p>综上，只要不给他们的服务器带来很大的负担，把GitHub仓库当个人图床使用根本不会有人来管你。</p>
+<h2 id="cdn服务的选择"><a class="markdownIt-Anchor" href="#cdn服务的选择"></a> CDN服务的选择</h2>
 <h3 id="七牛云"><a class="markdownIt-Anchor" href="#七牛云"></a> 七牛云</h3>
 <p>Https收费，http有10G免费流量。</p>
 <h3 id="cloudfare"><a class="markdownIt-Anchor" href="#cloudfare"></a> Cloudfare</h3>
-<p>Cloudflare提供nullCDN服务是免费null，SSL也是免费null，但是Cloudflarenull服务器全在国外，大陆访问特别慢。</p>
+<p>Cloudflare提供的CDN服务是免费的，SSL也是免费的，但是Cloudflare的服务器全在国外，大陆访问特别慢。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211211822833.png" alt="image-20221121182202707" /></p>
 <h3 id="又拍云"><a class="markdownIt-Anchor" href="#又拍云"></a> 又拍云</h3>
 <p>和七牛云差不多，但是如果在自己网站上挂个<a target="_blank" rel="noopener" href="https://www.upyun.com/league">广告</a>，那么可以免费使用一年</p>
-<p>我使用大门发存在又拍云CDN加速。</p>
+<p>我使用了又拍云CDN加速。</p>
 
 
 
