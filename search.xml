@@ -253,25 +253,6 @@
     
     
     <entry>
-      <title>CDN加速</title>
-      <link href="/posts/17107/"/>
-      <url>/posts/17107/</url>
-      
-        <content type="html"><![CDATA[<p>之前一直没弄明白CDN加速是怎么回事，自己捋了一下。</p><p>我的博客搭建在<a href="https://pages.github.com">GitHub Pages</a>上，通过域名xxx.github.io直接访问github的服务器，xxx.github.io叫做源站域名。使用了CDN加速服务后，CDN服务器会缓存源站的资源，之后我们浏览网页时就不用直接访问源站了，从CDN服务器上下载资源即可，这样就缓解了源站的压力。</p><p>这中间域名需要经过两次转换，自定义域名 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> CDN加速域名 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> <a href="http://xxx.github.io">xxx.github.io</a>。其中，自定义域名是自己购买的域名，CDN加速域名是CDN服务商提供的，xxx.github.io是GitHub提供的源站。我们要先在CDN服务商处设置自定义域名和源站域名，如下图所示：</p><p><img src="https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211060233060.png" alt="image-20221106023304874" /><small>七牛云CDN服务的设置</small></p><p>设置好后，CDN服务商会提供一个CDN加速域名，复制这个CDN加速域名，到购买域名的地方，将自定义域名解析到CDN加速域名。最后再在GitHub Pages上设置自定义域名访问。这样就设置好了。接下来，我们访问网站时会发生一系列跳转：用户通过浏览器访问自定义域名(<a href="http://www.pengfeima.cn">www.pengfeima.cn</a>)<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>CDN加速域名(<a href="http://xxxxxx.xxxx.qiniu.com">xxxxxx.xxxx.qiniu.com</a>)<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 源站域名(<a href="http://shaoyaoqian.github.io">shaoyaoqian.github.io</a>)。</p><p>我们可以自行设置CDN服务器的缓存策略。缓存是有时限的，过了时限后，CDN服务器上的资源会失效，CDN服务器会从源站调取资源重新缓存。放宽缓存时限会减少源站的压力，但是用户可能访问不到最新的内容。</p><p><img src="https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211071748920.png" alt="image-20221107174824742" /></p><p><small>缓存时间设置</small></p><p>国内CDN加速有两个限制：</p><ul><li>开启HTTPS服务需要CA证书，否则只能使用HTTP服务。</li><li>域名如果没有备案，那么只能覆盖海外CDN服务器。搭建在国内服务器上的网站需要备案，搭建在国外服务器上的网站无需备案，也无法备案。</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网站建设 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ubuntu系统配置clash代理</title>
       <link href="/posts/62627/"/>
       <url>/posts/62627/</url>
@@ -285,6 +266,25 @@
             <tag> linux </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CDN加速</title>
+      <link href="/posts/17107/"/>
+      <url>/posts/17107/</url>
+      
+        <content type="html"><![CDATA[<p>之前一直没弄明白CDN加速是怎么回事，自己捋了一下。</p><p>我的博客搭建在<a href="https://pages.github.com">GitHub Pages</a>上，通过域名xxx.github.io直接访问github的服务器，xxx.github.io叫做源站域名。使用了CDN加速服务后，CDN服务器会缓存源站的资源，之后我们浏览网页时就不用直接访问源站了，从CDN服务器上下载资源即可，这样就缓解了源站的压力。</p><p>这中间域名需要经过两次转换，自定义域名 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> CDN加速域名 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> <a href="http://xxx.github.io">xxx.github.io</a>。其中，自定义域名是自己购买的域名，CDN加速域名是CDN服务商提供的，xxx.github.io是GitHub提供的源站。我们要先在CDN服务商处设置自定义域名和源站域名，如下图所示：</p><p><img src="https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211060233060.png" alt="image-20221106023304874" /><small>七牛云CDN服务的设置</small></p><p>设置好后，CDN服务商会提供一个CDN加速域名，复制这个CDN加速域名，到购买域名的地方，将自定义域名解析到CDN加速域名。最后再在GitHub Pages上设置自定义域名访问。这样就设置好了。接下来，我们访问网站时会发生一系列跳转：用户通过浏览器访问自定义域名(<a href="http://www.pengfeima.cn">www.pengfeima.cn</a>)<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span>CDN加速域名(<a href="http://xxxxxx.xxxx.qiniu.com">xxxxxx.xxxx.qiniu.com</a>)<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> 源站域名(<a href="http://shaoyaoqian.github.io">shaoyaoqian.github.io</a>)。</p><p>我们可以自行设置CDN服务器的缓存策略。缓存是有时限的，过了时限后，CDN服务器上的资源会失效，CDN服务器会从源站调取资源重新缓存。放宽缓存时限会减少源站的压力，但是用户可能访问不到最新的内容。</p><p><img src="https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211071748920.png" alt="image-20221107174824742" /></p><p><small>缓存时间设置</small></p><p>国内CDN加速有两个限制：</p><ul><li>开启HTTPS服务需要CA证书，否则只能使用HTTP服务。</li><li>域名如果没有备案，那么只能覆盖海外CDN服务器。搭建在国内服务器上的网站需要备案，搭建在国外服务器上的网站无需备案，也无法备案。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网站建设 </category>
+          
+      </categories>
+      
       
     </entry>
     
