@@ -23,15 +23,15 @@
   <title>为开源项目提交commit的简易教程 - MerryJingle</title>
 
   
-    <meta name="description" content="简介：将自己的代码提交到他人的仓库中">
+    <meta name="description" content="将自己的代码提交到他人的仓库中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为开源项目提交commit的简易教程">
 <meta property="og:url" content="https://blog.pengfeima.cn/posts/26834/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="简介：将自己的代码提交到他人的仓库中">
+<meta property="og:description" content="将自己的代码提交到他人的仓库中">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-01T12:27:16.000Z">
-<meta property="article:modified_time" content="2022-12-08T03:25:37.872Z">
+<meta property="article:modified_time" content="2022-12-09T08:20:00.984Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -122,17 +122,17 @@ var _hmt = _hmt || [];
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>为开源项目提交commit的简易教程</span></h1>
-<p>简介：将自己的代码提交到他人的仓库中</p>
+<p>将自己的代码提交到他人的仓库中</p>
 <span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>今天给Stellar主题增加了一个功能，想把代码提交到上游仓库的主分支上，因此开了一个 pull request 。这是我第一次使用 pull request ，我总结了以下一些经验。</p>
+<p>今天我给Stellar主题增加了一个功能，想把代码提交到上游仓库的主分支上，因此开了一个 pull request 。这是我第一次使用 pull request ，我总结了以下一些经验。</p>
 <p>我自己在本地修改代码调试程序时，commit命令用得比较频繁，很多commit都是一些小修改，而且我会在代码中加入一些私货，我不想它们出现在别人的代码仓库中。我希望在pull request的时候只挑选出一些有用的commit，将它们合并成一个commit，再将它推送到上游仓库。</p>
 <p>不啰嗦了，直接写步骤吧～</p>
 <ol>
-<li>fetch 拉取上游仓库的主分支，将它更新到最新状态</li>
-<li>在 upstream/main 处创建并签出一个 dev 分支</li>
-<li>使用 cherry-pick 挑选出有用的commit加到dev分支上</li>
-<li>使用 rebase 将这些分支合并，并详细写写message</li>
+<li>fetch 拉取上游仓库的主分支，将仓库的 upatream/main 分支更新到最新状态</li>
+<li>在 upstream/main 分支创建并签出一个 dev 分支</li>
+<li>使用 cherry-pick 挑选出有用的 commit 加到 dev 分支上</li>
+<li>使用 rebase 将这些分支合并，并详写 message 解释代码的改动</li>
 <li>在 github 上开启一个 pull requst 等待作者审阅代码</li>
 </ol>
 
