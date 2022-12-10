@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202339678.png">
 <meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202650007.png">
 <meta property="article:published_time" content="2022-11-05T18:23:00.000Z">
-<meta property="article:modified_time" content="2022-12-10T09:46:00.997Z">
+<meta property="article:modified_time" content="2022-12-10T11:54:50.651Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -90,6 +90,10 @@ var _hmt = _hmt || [];
       <script src="https://unpkg.com/flyio/dist/fly.min.js"></script>
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shaoyaoqian/images-1@main/assets/alice-player.css" />
+    
+      <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+    
+      <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
   
 </head>
@@ -403,7 +407,7 @@ Services Provided By <a href=https://www.cloudflare.com>Cloudflare</a> & <a href
   
     <script src="https://cdn.jsdelivr.net/gh/shaoyaoqian/images-1@main/assets/alice-player.umd.js"></script>
   
-    <script>  var player = '#app1'; var playList = [ { audio: '//raw.githubusercontent.com/shaoyaoqian/images-1/main/music/29818028.mp3', cover: 'http://qiniu.pengfeima.cn/typora/202212062310206.jpg', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/29818028.lrc', name: 'Rainy Mood', artist: 'www.rainymood.com', },{ audio: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.lrc', name: 'The White Lady', artist: 'Christopher Larkin', },{ audio: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.lrc', name: '我记得', artist: '赵雷', },{ audio: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.lrc', name: '如何', artist: '张悬', },{ audio: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.lrc', name: '留下来陪你生活', artist: '张悬', },{ audio: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.lrc', name: '喜欢', artist: '张悬', } ]; var options = { container: player, preload: 'metadata', autoplay: false, }; var ap = new AlicePlayer(playList, options); </script> 
+    <script>  var player = 'aplayer'; const ap = new APlayer({ container: document.getElementById(player), mini: false, autoplay: false, theme: '#FADFA3', loop: 'all', order: 'random', preload: 'auto', volume: 0.7, mutex: true, listFolded: true, listMaxHeight: 90, lrcType: 3, audio: [{ url: '//raw.githubusercontent.com/shaoyaoqian/images-1/main/music/29818028.mp3', cover: 'http://qiniu.pengfeima.cn/typora/202212062310206.jpg', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/29818028.lrc', name: 'Rainy Mood', artist: 'www.rainymood.com', },{ url: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1309394503.lrc', name: 'The White Lady', artist: 'Christopher Larkin', },{ url: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/1974443814.lrc', name: '我记得', artist: '赵雷', },{ url: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927794.lrc', name: '如何', artist: '张悬', },{ url: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/26590191.lrc', name: '留下来陪你生活', artist: '张悬', },{ url: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.mp3', cover: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.png', lrc: 'https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/453927771.lrc', name: '喜欢', artist: '张悬', }] }); </script> 
   
 
 
