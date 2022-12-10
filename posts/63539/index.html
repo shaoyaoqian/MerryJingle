@@ -20,21 +20,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>便签：Hello Wordfadfadsfald - MerryJingle</title>
+  <title>爬取网易云音乐并插入博客 - MerryJingle</title>
 
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  Quic">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello Wordfadfadsfald">
-<meta property="og:url" content="https://blog.pengfeima.cn/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A02.html">
+    <meta name="description" content="在博客中加入歌曲的id号，js便能通过网易云音乐的API获取专辑封面、曲名、歌词、播放链接，组装一个自定义的音乐播放器。VIP歌曲也可以。少数歌曲只能试听30秒，我也不知道为什么。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬取网易云音乐并插入博客">
+<meta property="og:url" content="https://blog.pengfeima.cn/posts/63539/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  Quic">
+<meta property="og:description" content="在博客中加入歌曲的id号，js便能通过网易云音乐的API获取专辑封面、曲名、歌词、播放链接，组装一个自定义的音乐播放器。VIP歌曲也可以。少数歌曲只能试听30秒，我也不知道为什么。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-10T09:28:35.566Z">
-<meta property="article:modified_time" content="2022-12-10T09:28:35.566Z">
+<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/202212101718182.png">
+<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/202212101720307.png">
+<meta property="article:published_time" content="2022-12-10T08:53:08.000Z">
+<meta property="article:modified_time" content="2022-12-10T09:28:35.558Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qiniu.pengfeima.cn/typora/202212101718182.png">
 <meta name="twitter:creator" content="@mpf_npu">
   
   
@@ -90,24 +93,30 @@ var _hmt = _hmt || [];
 
 
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='wiki'>
+    <aside class='l_left' layout='post'>
     
 
   
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://githubimages.pengfeima.cn/images/202211261944169.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MerryJingle</div><div class="sub normal cap">快乐的铃铛</div><div class="sub hover cap" style="opacity:0">你发现了这里还有一行字</div></a></div>
 
-<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/posts/">文章</a><a class="nav-item" href="/wiki/">知识库</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item active" href="/posts/">文章</a><a class="nav-item" href="/wiki/">知识库</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
 </header>
 
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc multi" id="toc"><div class="widget-header cap dis-select"><span class="name">美化</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A03.html"><span class="toc-text">Hello Wordfadfadsfald</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/notes/%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96/%E6%96%87%E7%AB%A04.html"><span class="toc-text">Hello Wordfadfadsfald</span></a></div></div><div class="widget-header cap dis-select"><span class="name">游戏</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html"><span class="toc-text">Hello Wordfadfadsfald</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A02.html"><span class="toc-text">Hello Wordfadfadsfald</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-text"> Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-a-new-post"><span class="toc-text"> Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#run-server"><span class="toc-text"> Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate-static-files"><span class="toc-text"> Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy-to-remote-sites"><span class="toc-text"> Deploy to remote sites</span></a></li></ol></li></ol></div></div></widget>
 
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/notes/" placeholder="在 /wiki/notes/ 中搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/35875/"><span class="title">课题组服务器资源分配</span></a><a class="item title" href="/posts/14811/"><span class="title">通过微信公众号在博客中发布动态</span></a><a class="item title" href="/posts/49263/"><span class="title">音乐播放器</span></a><a class="item title" href="/posts/55132/"><span class="title">CFD问题中的稳定性分析</span></a><a class="item title" href="/posts/41860/"><span class="title">LaTeX的一些小妙招</span></a></div></widget>
+
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
 </div>
-
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/shaoyaoqian" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a></div></footer>
 
     </aside>
     <div class='l_main'>
@@ -115,37 +124,44 @@ var _hmt = _hmt || [];
 
       
 
-  
-  
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-10T08:53:08.000Z">2022-12-10</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>爬取网易云音乐并插入博客</span></h1>
+<p>在博客中加入歌曲的id号，js便能通过网易云音乐的API获取专辑封面、曲名、歌词、播放链接，组装一个自定义的音乐播放器。VIP歌曲也可以。少数歌曲只能试听30秒，我也不知道为什么。</p>
+<span id="more"></span>
+<p>肝了一下午，本小白终于弄懂了javascript中的Promise的用法，还弄懂了异步计算，之后写起来就很顺利了。做法就是用vercel搭建一个第三方网易云音乐的API，原理就是跨站请求伪造，我也是够喜欢折腾的。目前，专辑封面、曲名、歌词、播放链接这些数据都能获取了，但是这些数据都是异步获取的，因此在页面中的排版顺序是随机的。后面最好设计一个骨架，或者用现成的，把数据放到指定的块中。</p>
+<p>好了，不废话了，用法很简单，在Markdown页面中加入下面这些语句，就会出现播放器了。至于为什么要写一个时间线，因为我把代码写进了weibo.js文件里了，我试过单独写一个不netease.js，但是不生效，我也不知道为什么。timeline在这里是没有用的，只是告诉hexo，这里要运行一下weibo.js。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% timeline type:weibo api:https://api.github.com/repos/shaoyaoqian/MerryJingle/issues %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;netease-music-player&#x27;</span> <span class="attr">song_id</span>=<span class="string">&#x27;436147423&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果如下，很丑对吧？我们还需要设计一个播放器，可以参考我之前的博客。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/202212101718182.png" alt="image-20221210171800921" /></p>
+<p>你不知道song_id是什么？打开浏览器版的网易云音乐，在地址栏能看到。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/202212101720307.png" alt="image-20221210172023184" /></p>
 
 
-  <article class='md-text content wiki'>
-  <h1 class="article-title"><span>Hello Wordfadfadsfald</span></h1>
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
-<p>HHHHHHHaahahaahh</p>
-<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;M .       y New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-  
 
 
-  </article>
-  
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/notes/%E6%B8%B8%E6%88%8F/%E6%96%87%E7%AB%A01.html">Hello Wordfadfadsfald</a></div><div class="item" id="next"></div></section></div>
+</article>
 
-  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/12076/">过年了放烟花啦</a></div></section></div>
 
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
 
 
 
