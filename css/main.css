@@ -28,7 +28,7 @@
   }
 }
 :root {
-  --site-bg: #f9fafb;
+  --site-bg: #fff;
   --card: #fff;
   --block: #f1f2f3;
   --block-border: #e3e5e8;
@@ -46,12 +46,12 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #26292c;
-    --card: #383f47;
-    --block: #1c1e21;
+    --site-bg: #131416;
+    --card: #363d45;
+    --block: #26292c;
     --block-border: #383d42;
-    --block-hover: #151719;
-    --block-lighten: #464c53;
+    --block-hover: #2f3337;
+    --block-lighten: #4b5158;
     --text-p0: #fff;
     --text-p1: #ccc;
     --text-p2: #b3b3b3;
