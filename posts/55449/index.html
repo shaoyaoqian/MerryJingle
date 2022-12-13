@@ -23,48 +23,32 @@
   <title>增加相册页面 - MerryJingle</title>
 
   
-    <meta name="description" content="简介：">
+    <meta name="description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox">
 <meta property="og:type" content="article">
 <meta property="og:title" content="增加相册页面">
 <meta property="og:url" content="https://blog.pengfeima.cn/posts/55449/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="简介：">
+<meta property="og:description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216879.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217546.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217893.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217240.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216884.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216894.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217904.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217670.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216722.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216879.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217546.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217893.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217240.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216894.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217904.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217670.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216722.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212122142275.png">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217910.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217662.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217355.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217704.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217634.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217655.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217112.jpg">
 <meta property="article:published_time" content="2022-12-12T14:10:31.000Z">
-<meta property="article:modified_time" content="2022-12-13T07:19:11.229Z">
+<meta property="article:modified_time" content="2022-12-13T10:33:41.199Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -135,9 +119,7 @@ var _hmt = _hmt || [];
 
 <div class="widgets">
 
-
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/55447/"><span class="title">增加相册页面</span></a><a class="item title" href="/posts/55449/"><span class="title">增加相册页面</span></a><a class="item title" href="/posts/20229/"><span class="title">用beamer做演示稿</span></a><a class="item title" href="/posts/26834/"><span class="title">为开源项目提交commit的简易教程</span></a><a class="item title" href="/posts/62627/"><span class="title">ubuntu系统配置clash代理</span></a></div></widget>
-
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">增加相册页面</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text"> 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%85%E6%94%B9%E8%BF%9B%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-text"> 待改进的地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text"> 参数</span></a></li></ol></div></div></widget>
 
 
 
@@ -158,133 +140,67 @@ var _hmt = _hmt || [];
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>增加相册页面</span></h1>
-<p>简介：</p>
-<span id="more"></span>
-<p>我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。</p>
-<p>首先是<a target="_blank" rel="noopener" href="https://www.discourse.org/">Discourse</a>的一款插件<a target="_blank" rel="noopener" href="https://meta.discourse.org/t/tiles-image-gallery/81950">Tiles Image Gallery</a>。</p>
-<p>然后是<a target="_blank" rel="noopener" href="https://vlts.cc/v6/tag-plugins/#gallery">Volantis</a>的gallery标签，<a target="_blank" rel="noopener" href="https://pinlyu.com/album/landscape/">频率</a>的博客以及<a target="_blank" rel="noopener" href="https://pinlyu.com/posts/31/">教程</a>，<a target="_blank" rel="noopener" href="https://blog.shishuai.monster/gallery/jay-chou/">RongJ</a>的博客。</p>
-<p>最后我决定结合使用下面这两款插件：</p>
+<p>我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是<a target="_blank" rel="noopener" href="https://www.discourse.org/">Discourse</a>的一款插件<a target="_blank" rel="noopener" href="https://meta.discourse.org/t/tiles-image-gallery/81950">Tiles Image Gallery</a>，然后是<a target="_blank" rel="noopener" href="https://vlts.cc/v6/tag-plugins/#gallery">Volantis</a>的gallery标签，<a target="_blank" rel="noopener" href="https://pinlyu.com/album/landscape/">频率</a>的博客以及<a target="_blank" rel="noopener" href="https://pinlyu.com/posts/31/">教程</a>，<a target="_blank" rel="noopener" href="https://blog.shishuai.monster/gallery/jay-chou/">RongJ</a>的博客，最后我决定结合使用下面这两款插件：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://miromannino.github.io/Justified-Gallery/lightboxes/">Justified Gallery</a></li>
 <li><a target="_blank" rel="noopener" href="https://fancyapps.com/docs/ui/fancybox">Fancybox</a></li>
 </ul>
-<p>使用方法(暂时)：</p>
-<ol>
-<li>
-<p>在博客中插入html格式的图片。</p>
-</li>
-<li>
-<p>在浏览器中执行JS脚本。</p>
-</li>
-</ol>
+<span id="more"></span>
 <p>可获得效果：</p>
 <style>
 .md-text img {
   border-radius:0px
 }
 </style>
-<div id="mygallery" class="justified-gallery">
-<div>
-        <img class="lazy" alt="Title 1" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216879.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217546.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217893.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217240.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216894.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217904.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217670.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216722.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div><div>
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-</div>
-</div>
-<div id="mygallery2" class="justified-gallery">
-    <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216879.jpg">
-        <img class="lazy" alt="Title 1" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216879.jpg"/>
-    </a>
-    <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217546.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217546.jpg"/>
-    </a>
-    <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217893.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217893.jpg"/>
-    </a>
-    <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217240.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217240.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216894.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216894.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217904.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217904.jpg"/>
-    </a>
-    <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217670.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217670.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-            <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216722.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216722.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-        <a target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-        <img class="lazy" alt="Title 2" nolazy src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg"/>
-    </a>
-</div>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212122142275.png" alt="image-20221212214254821" /></p>
-<p>代码：</p>
-<p>比较完善的版本可以看这里：<a target="_blank" rel="noopener" href="https://blog.shishuai.monster/gallery/landscape/">风景 | 杂记 (shishuai.monster)</a>。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mygallery&quot;</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291216879.jpg&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;Title 1&quot;</span> <span class="attr">nolazy</span> <span class="attr">src</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291216879.jpg&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291217546.jpg&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;Title 2&quot;</span> <span class="attr">nolazy</span> <span class="attr">src</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291217546.jpg&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291217893.jpg&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;Title 2&quot;</span> <span class="attr">nolazy</span> <span class="attr">src</span>=<span class="string">&quot;https://githubimages.pengfeima.cn/images/202211291217893.jpg&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">stellar.<span class="title function_">jQuery</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 加载 Justified Gallery</span></span><br><span class="line">  <span class="keyword">var</span> jstified_gallery_js = <span class="string">&quot;https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js&quot;</span>;</span><br><span class="line">  stellar.<span class="title function_">loadScript</span>(jstified_gallery_js).<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    $(<span class="string">&quot;#mygallery&quot;</span>).<span class="title function_">justifiedGallery</span>().<span class="title function_">on</span>(<span class="string">&#x27;jg.complete&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// 绑定 Fancybox</span></span><br><span class="line">      <span class="comment">// <span class="doctag">TODO:</span> 选择器要修改。</span></span><br><span class="line">      <span class="title class_">Fancybox</span>.<span class="title function_">bind</span>(<span class="string">&quot;img&quot;</span>, &#123;</span><br><span class="line">        <span class="attr">groupAttr</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">hideScrollbar</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="title class_">Thumbs</span>: &#123;</span><br><span class="line">          <span class="attr">autoStart</span>: <span class="literal">false</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">caption</span>: <span class="keyword">function</span> (<span class="params">fancybox, carousel, slide</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> slide.<span class="property">$trigger</span>.<span class="property">alt</span> || <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<div id="unjnydeiorq" class="justified-gallery"><a data-fancybox="unjnydeiorq" data-caption="3721669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216879.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216879.jpg" alt="3721669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3711669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217546.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217546.jpg" alt="3711669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3701669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217893.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217893.jpg" alt="3701669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3691669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217240.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217240.jpg" alt="3691669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3681669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216884.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216884.jpg" alt="3681669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3671669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216894.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216894.jpg" alt="3671669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3661669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217904.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217904.jpg" alt="3661669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3651669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217670.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217670.jpg" alt="3651669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3641669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216662.jpg" alt="3641669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3631669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216722.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291216722.jpg" alt="3631669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3621669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217910.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217910.jpg" alt="3621669695359_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3611669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217662.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217662.jpg" alt="3611669695358_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3601669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217355.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217355.jpg" alt="3601669695358_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3591669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217704.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217704.jpg" alt="3591669695358_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3581669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217634.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217634.jpg" alt="3581669695358_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3571669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217655.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217655.jpg" alt="3571669695358_.pic" /></a><a data-fancybox="unjnydeiorq" data-caption="3561669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217112.jpg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211291217112.jpg" alt="3561669695358_.pic" /></a></div>
+<blockquote>
+<p>注意：stellar主题默认给图片增加了圆角的效果，这里我给他去除了。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-class">.md-text</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0px</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h4>
+<p>Hexo文档中插入下面这段示例代码即可显示上述效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% gallery %&#125;</span><br><span class="line">![3721669695359_.pic](path/22211291216879.jpg)</span><br><span class="line">![3711669695359_.pic](path/02211291217546.jpg)</span><br><span class="line">&#123;% endgallery %&#125;</span><br></pre></td></tr></table></figure>
+<p>JS代码分为两部分，第一部分将Markdown语法组装成HTML代码，第二部分在用户端调用Fancybox和Justified Gallery渲染页面。第二部分代码在<code>main.js</code>文件末尾。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/shaoyaoqian/hexo-theme-stellar/blob/3d012e35a5680a379700fafd8a9006c00e7a84ef/scripts/tags/lib/gallery.js">gallery.js</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shaoyaoqian/hexo-theme-stellar/blob/3d012e35a5680a379700fafd8a9006c00e7a84ef/source/js/main.js">main.js</a></li>
+</ul>
+<h4 id="待改进的地方"><a class="markdownIt-Anchor" href="#待改进的地方"></a> 待改进的地方</h4>
+<p>目前不足之处：</p>
+<ul>
+<li>未使用略缩图</li>
+<li>图片加载失败时没有错误处理</li>
+<li>不能直接从GitHub仓库的文件夹加载相册</li>
+<li>和stellar的tabs标签不兼容</li>
+<li>没有加入微调参数</li>
+</ul>
+<h4 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h4>
+<p><a target="_blank" rel="noopener" href="https://miromannino.github.io/Justified-Gallery/options-and-events/">Justified Gallery的参数</a>挺多的，行高，最大行数，末尾行是否填满，图片之间的间隙，是否有标题等等。</p>
+<p>欢迎提出建议。</p>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/55447/">增加相册页面</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/63539/">在博客中插入音乐</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/56449/">使用人工智能ChatGPT写检讨</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/63539/">在博客中插入音乐</a></div></section></div>
 
 
 
 
 
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
 
 
 

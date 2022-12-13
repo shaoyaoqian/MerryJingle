@@ -401,24 +401,26 @@ function justified_gallery(container){
   $(container).justifiedGallery( 
     {
       lastRow : 'justify', 
-      rowHeight : 120, 
-      margins : 2,
+      rowHeight : 150, 
+      captions: false,
+      margins : 4,
+      border: -1
       // waitThumbnailsLoad: false
     }
   ).on('jg.complete', function () {
     // 绑定 Fancybox
     // TODO: 选择器要修改，吗？
-    Fancybox.bind(".justified-gallery img", {
-      groupAttr: true,
-      hideScrollbar: false,
+    Fancybox.bind(container+" a", {
+      // groupAttr: true,
+      // hideScrollbar: false,
       // Thumbs: {
         // autoStart: false,
       // },
       caption: function (fancybox, carousel, slide) {
-        return slide.$trigger.alt || null
+        return `<center>${slide.index + 1} / ${carousel.slides.length} <br /></center>` + slide.caption
+        // return slide.caption | null
       }
     });
-    console.log(".justified-gallery img");
   });
 };
 
