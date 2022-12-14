@@ -28,7 +28,7 @@
   }
 }
 :root {
-  --site-bg: #fff;
+  --site-bg: #f9fafb;
   --card: #fff;
   --block: #f1f2f3;
   --block-border: #e3e5e8;
@@ -46,7 +46,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #131416;
+    --site-bg: #1c1e21;
     --card: #363d45;
     --block: #26292c;
     --block-border: #383d42;
@@ -634,7 +634,7 @@ table:not([class]) {
 }
 html {
   font-family: LXGWWenKai-Regular, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   scroll-behavior: smooth;
