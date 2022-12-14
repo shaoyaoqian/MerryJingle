@@ -20,32 +20,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>ubuntu系统配置clash代理 - MerryJingle</title>
+  <title>用 lightbox 实现灯箱效果 - MerryJingle</title>
 
   
-    <meta name="description" content="ubuntu配置clash系统代理  本文仅简要记录过程  cd ~wget http:&#x2F;&#x2F;qiniu.pengfeima.cn&#x2F;clash-linux-amd64-v1.11.12.gzgunzip clash-linux-amd64-v1.11.12.gzmv clash-linux-amd64-v1.11.12 clashmkdir Clashmv clash .&#x2F;Clash cd ~&#x2F;C">
+    <meta name="description" content="灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu系统配置clash代理">
-<meta property="og:url" content="https://blog.pengfeima.cn/posts/62627/index.html">
+<meta property="og:title" content="用 lightbox 实现灯箱效果">
+<meta property="og:url" content="https://blog.pengfeima.cn/posts/12277/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="ubuntu配置clash系统代理  本文仅简要记录过程  cd ~wget http:&#x2F;&#x2F;qiniu.pengfeima.cn&#x2F;clash-linux-amd64-v1.11.12.gzgunzip clash-linux-amd64-v1.11.12.gzmv clash-linux-amd64-v1.11.12 clashmkdir Clashmv clash .&#x2F;Clash cd ~&#x2F;C">
+<meta property="og:description" content="灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109201937656.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202226593.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202210698.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202339678.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202650007.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109201937656.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202226593.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202210698.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202339678.png">
-<meta property="og:image" content="http://qiniu.pengfeima.cn/typora/image-20221109202650007.png">
-<meta property="article:published_time" content="2022-11-05T18:23:00.000Z">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212141450187.png">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212141450940.png">
+<meta property="article:published_time" content="2022-11-06T05:23:00.000Z">
 <meta property="article:modified_time" content="2022-12-14T07:51:55.584Z">
 <meta property="article:author" content="MerryJingle">
-<meta property="article:tag" content="linux">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://qiniu.pengfeima.cn/typora/image-20221109201937656.png">
+<meta property="article:tag" content="一些关键词">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202212141450187.png">
 <meta name="twitter:creator" content="@mpf_npu">
   
   
@@ -129,7 +121,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">ubuntu系统配置clash代理</span></div><div class="widget-body fs14"><div class="doc-tree active"></div></div></widget>
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">用 lightbox 实现灯箱效果</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown%E8%AF%AD%E8%A8%80%E4%B8%8Ehtml%E8%AF%AD%E8%A8%80"><span class="toc-text"> Markdown语言与html语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lightbox-%E6%8F%92%E4%BB%B6"><span class="toc-text"> Lightbox 插件</span></a></li></ol></div></div></widget>
 
 
 
@@ -146,63 +138,38 @@ p.small {
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-05T18:23:00.000Z">2022-11-06</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-06T05:23:00.000Z">2022-11-06</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>ubuntu系统配置clash代理</span></h1>
-<h1 id="ubuntu配置clash系统代理"><a class="markdownIt-Anchor" href="#ubuntu配置clash系统代理"></a> <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/430035973">ubuntu配置clash系统代理</a></h1>
-<blockquote>
-<p>本文仅简要记录过程</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget http://qiniu.pengfeima.cn/clash-linux-amd64-v1.11.12.gz</span><br><span class="line">gunzip clash-linux-amd64-v1.11.12.gz</span><br><span class="line"><span class="built_in">mv</span> clash-linux-amd64-v1.11.12 clash</span><br><span class="line"><span class="built_in">mkdir</span> Clash</span><br><span class="line"><span class="built_in">mv</span> clash ./Clash</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Clash</span><br><span class="line">wget -O Country.mmdb http://qiniu.pengfeima.cn/Country.mmdb</span><br></pre></td></tr></table></figure>
-<ol>
-<li>在windows版的clash中找到yaml文件</li>
-<li>打开并加入<code>secret:123456</code></li>
-<li>将其拷贝到clash文件夹中</li>
-<li>在网络设置中设置代理</li>
-</ol>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109201937656.png" alt="image-20221109201937656" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202226593.png" alt="image-20221109202226593" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202210698.png" alt="image-20221109202210698" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202339678.png" alt="image-20221109202339678" /></p>
-<ol>
-<li>启动clash</li>
-<li>在浏览器中打开<a target="_blank" rel="noopener" href="http://clash.razord.top/%E9%9D%A2%E6%9D%BF">http://clash.razord.top/面板</a></li>
-<li>输入参数</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Clash</span><br><span class="line"><span class="built_in">chmod</span> +x clash</span><br><span class="line">./clash -d .</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202650007.png" alt="image-20221109202650007" /></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/430035973">ubuntu配置clash系统代理</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget http://qiniu.pengfeima.cn/clash-linux-amd64-v1.11.12.gz</span><br><span class="line">gunzip clash-linux-amd64-v1.11.12.gz</span><br><span class="line"><span class="built_in">mv</span> clash-linux-amd64-v1.11.12 clash</span><br><span class="line"><span class="built_in">mkdir</span> Clash</span><br><span class="line"><span class="built_in">mv</span> clash ./Clash</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Clash</span><br><span class="line">wget -O Country.mmdb http://qiniu.pengfeima.cn/Country.mmdb</span><br></pre></td></tr></table></figure>
-<ol>
-<li>在windows版的clash中找到yaml文件</li>
-<li>打开并加入<code>secret:123456</code></li>
-<li>将其拷贝到clash文件夹中</li>
-<li>在网络设置中设置代理</li>
-</ol>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109201937656.png" alt="image-20221109201937656" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202226593.png" alt="image-20221109202226593" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202210698.png" alt="image-20221109202210698" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202339678.png" alt="image-20221109202339678" /></p>
-<ol>
-<li>启动clash</li>
-<li>在浏览器中打开<a target="_blank" rel="noopener" href="http://clash.razord.top/%E9%9D%A2%E6%9D%BF">http://clash.razord.top/面板</a></li>
-<li>输入参数</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Clash</span><br><span class="line"><span class="built_in">chmod</span> +x clash</span><br><span class="line">./clash -d .</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://qiniu.pengfeima.cn/typora/image-20221109202650007.png" alt="image-20221109202650007" /></p>
-<p>至此，能正常访问谷歌学术。</p>
-<p>命令行代理：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+<h1 class="article-title"><span>用 lightbox 实现灯箱效果</span></h1>
+<p>灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。</p>
+<span id="more"></span>
+<h3 id="markdown语言与html语言"><a class="markdownIt-Anchor" href="#markdown语言与html语言"></a> Markdown语言与html语言</h3>
+<p>我们先要了解Markdown语言是怎么被解释成HTML语言。以下markdown语言</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">image-20221006234019929</span>](<span class="link">https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png</span>)图片</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">image-20221006234019929</span>](<span class="link">https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png</span>)</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">small</span>&gt;</span></span>这是我保存在旧手机上的图片，2021年国庆，给老师做的PPT<span class="language-xml"><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>分别会被解析成</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">small</span>&gt;</span>这是我保存在旧手机上的图片，2021年国庆，给老师做的PPT<span class="tag">&lt;/<span class="name">small</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果图片后面不是文字，或者空了一行，那么会就会被解释成</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>总之，解析后的HTML代码中有一对<code>&lt;p&gt;&lt;/p&gt;</code>标签，它的内部包含了一个<code>&lt;img&gt;</code>标签，图片链接保存在<code>&lt;img&gt;</code>标签中，我们要思考的是怎么处理<code>&lt;img&gt;</code>标签。</p>
+<h3 id="lightbox-插件"><a class="markdownIt-Anchor" href="#lightbox-插件"></a> Lightbox 插件</h3>
+<p>我想要的效果是<a target="_blank" rel="noopener" href="https://lokeshdhakar.com/projects/lightbox2/#browser-support">Lightbox2 (lokeshdhakar.com)</a>，教程可以参考<a target="_blank" rel="noopener" href="https://christianspecht.de/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/">Generating an image gallery with Jekyll and Lightbox2</a>。简单来说，我们要给原来的<code>&lt;img&gt;</code>标签包上一对<code>&lt;a&gt;&lt;/a&gt;</code>标签，剩下的交给Lightbox插件来处理就行了。包装后的HTML文本如下所示：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211061407124.png&quot;</span> <span class="attr">data-lightbox</span>=<span class="string">&quot;example&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211061407124.png&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们要在浏览器加载完成HTML文本后，用js脚本遍历所有满足选择器<code>img</code>的元素，给他包上<code>&lt;a&gt;&lt;/a&gt;</code>，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">add_lightbox</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span>(<span class="params">index, val</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">var</span> link = $(<span class="string">&#x27;&lt;a&gt;&lt;/a&gt;&#x27;</span>).<span class="title function_">attr</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;rel&#x27;</span>: <span class="string">&#x27;lightbox&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;href&#x27;</span>: $(val).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>),</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;data-lightbox&#x27;</span>:<span class="string">&quot;roadtrip&quot;</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">        $(val).<span class="title function_">parent</span>().<span class="title function_">prepend</span>(link);</span></span><br><span class="line"><span class="language-javascript">        link.<span class="title function_">append</span>($(val));</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">      )</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>要在body元素上调用这个函数，<code>&lt;body onload=&quot;add_lightbox()&quot;&gt;</code>，表示文档加载完毕后才会执行这个脚本。</p>
+<p>修改后可以获得如下效果：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212141450187.png" alt="image-20221106140712923" /></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212141450940.png" alt="image-20221106150630189" /></p>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/17107/">CDN加速</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/20229/">用beamer做演示稿</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/52166/">利用Github Action部署博客</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/17107/">CDN加速</a></div></section></div>
 
 
 

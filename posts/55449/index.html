@@ -23,33 +23,16 @@
   <title>增加相册页面 - MerryJingle</title>
 
   
-    <meta name="description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox">
+    <meta name="description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及瀑布流的教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox  效果如下图所示，也可以点击这里查看本站的示例。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="增加相册页面">
 <meta property="og:url" content="https://blog.pengfeima.cn/posts/55449/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox">
+<meta property="og:description" content="我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及瀑布流的教程，RongJ的博客，最后我决定结合使用下面这两款插件：  Justified Gallery Fancybox  效果如下图所示，也可以点击这里查看本站的示例。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212132125669.png">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216879.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217546.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217893.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217240.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216884.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216894.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217904.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217670.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291216722.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217910.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217662.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217355.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217704.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217634.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217655.jpg">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211291217112.jpg">
 <meta property="article:published_time" content="2022-12-12T14:10:31.000Z">
-<meta property="article:modified_time" content="2022-12-14T05:13:17.161Z">
+<meta property="article:modified_time" content="2022-12-14T07:51:55.584Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -137,7 +120,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">增加相册页面</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text"> 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%85%E6%94%B9%E8%BF%9B%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-text"> 待改进的地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text"> 参数</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">增加相册页面</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text"> 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%85%E6%94%B9%E8%BF%9B%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-text"> 待改进的地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text"> 参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AC%A2%E8%BF%8E%E6%8F%90%E5%87%BA%E5%BB%BA%E8%AE%AE"><span class="toc-text"> 欢迎提出建议</span></a></li></ol></div></div></widget>
 
 
 
@@ -158,20 +141,14 @@ p.small {
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>增加相册页面</span></h1>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212132125669.png" alt="效果" /></p>
-<p>我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是<a target="_blank" rel="noopener" href="https://www.discourse.org/">Discourse</a>的一款插件<a target="_blank" rel="noopener" href="https://meta.discourse.org/t/tiles-image-gallery/81950">Tiles Image Gallery</a>，然后是<a target="_blank" rel="noopener" href="https://vlts.cc/v6/tag-plugins/#gallery">Volantis</a>的gallery标签，<a target="_blank" rel="noopener" href="https://pinlyu.com/album/landscape/">频率</a>的博客以及<a target="_blank" rel="noopener" href="https://pinlyu.com/posts/31/">教程</a>，<a target="_blank" rel="noopener" href="https://blog.shishuai.monster/gallery/jay-chou/">RongJ</a>的博客，最后我决定结合使用下面这两款插件：</p>
+<p>我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是<a target="_blank" rel="noopener" href="https://www.discourse.org/">Discourse</a>的一款插件<a target="_blank" rel="noopener" href="https://meta.discourse.org/t/tiles-image-gallery/81950">Tiles Image Gallery</a>，然后是<a target="_blank" rel="noopener" href="https://vlts.cc/v6/tag-plugins/#gallery">Volantis</a>的gallery标签，<a target="_blank" rel="noopener" href="https://pinlyu.com/album/landscape/">频率</a>的博客以及<a target="_blank" rel="noopener" href="https://pinlyu.com/posts/31/">瀑布流的教程</a>，<a target="_blank" rel="noopener" href="https://blog.shishuai.monster/gallery/jay-chou/">RongJ</a>的博客，最后我决定结合使用下面这两款插件：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://miromannino.github.io/Justified-Gallery/lightboxes/">Justified Gallery</a></li>
 <li><a target="_blank" rel="noopener" href="https://fancyapps.com/docs/ui/fancybox">Fancybox</a></li>
 </ul>
+<p>效果如下图所示，也可以点击<a href="https://blog.pengfeima.cn/posts/15648/">这里</a>查看本站的示例。<br />
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212132125669.png" alt="效果" /></p>
 <span id="more"></span>
-<p>可获得效果：</p>
-<style>
-.md-text img {
-  border-radius:0px
-}
-</style>
-<div id="2bs9dapmhw6" class="justified-gallery"><a data-fancybox="2bs9dapmhw6" data-caption="3721669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216879.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291216879.jpg" alt="3721669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3711669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217546.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217546.jpg" alt="3711669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3701669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217893.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217893.jpg" alt="3701669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3691669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217240.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217240.jpg" alt="3691669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3681669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216884.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291216884.jpg" alt="3681669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3671669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216894.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291216894.jpg" alt="3671669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3661669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217904.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217904.jpg" alt="3661669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3651669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217670.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217670.jpg" alt="3651669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3641669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216662.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291216662.jpg" alt="3641669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3631669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291216722.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291216722.jpg" alt="3631669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3621669695359_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217910.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217910.jpg" alt="3621669695359_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3611669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217662.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217662.jpg" alt="3611669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3601669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217355.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217355.jpg" alt="3601669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3591669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217704.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217704.jpg" alt="3591669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3581669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217634.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217634.jpg" alt="3581669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3571669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217655.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217655.jpg" alt="3571669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a data-fancybox="2bs9dapmhw6" data-caption="3561669695358_.pic" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202211291217112.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202211291217112.jpg" alt="3561669695358_.pic" / onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a></div>
 <blockquote>
 <p>注意：stellar主题默认给图片增加了圆角的效果，这里我给他去除了。</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-class">.md-text</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0px</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
@@ -187,7 +164,7 @@ p.small {
 <h4 id="待改进的地方"><a class="markdownIt-Anchor" href="#待改进的地方"></a> 待改进的地方</h4>
 <p>目前不足之处：</p>
 <ul>
-<li>未使用略缩图</li>
+<li>未使用略缩图，CDN有这一项服务</li>
 <li>图片加载失败时没有错误处理</li>
 <li>不能直接从GitHub仓库的文件夹加载相册</li>
 <li>和stellar的tabs标签不兼容</li>
@@ -195,7 +172,7 @@ p.small {
 </ul>
 <h4 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h4>
 <p><a target="_blank" rel="noopener" href="https://miromannino.github.io/Justified-Gallery/options-and-events/">Justified Gallery的参数</a>挺多的，行高，最大行数，末尾行是否填满，图片之间的间隙，是否有标题等等。</p>
-<p>欢迎提出建议。</p>
+<h4 id="欢迎提出建议"><a class="markdownIt-Anchor" href="#欢迎提出建议"></a> 欢迎提出建议</h4>
 
 
 
