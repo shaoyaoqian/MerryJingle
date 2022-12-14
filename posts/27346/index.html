@@ -20,15 +20,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>GitHub图床搭配又拍云CDN加速 - MerryJingle</title>
+  <title>图床 - MerryJingle</title>
 
   
-    <meta name="description" content="具体步骤  原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 xxx.github.io&#x2F;images&#x2F;xxx.png 访问这个仓库中的图片，现在通过自定义域名 images_0.example.com&#x2F;images&#x2F;xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可">
+    <meta name="description" content="如果有人告诉你，谁家提供的图床服务速度快，稳定可靠，价格便宜，那一定是骗人的。我不会使用微博，因为他本来就不提供图床服务，后面图片访问不了了，求谁都没用。我也不会使用私人搭建的图床服务，提供类似服务的人一般都很善良，但是抵挡不住太多变数。我偏向于选择那些已经成立多年了的云服务商，虽然他们也会卷钱跑路，那种情况只能自认倒霉了。 图床需要云存储搭配CDN加速使用，个人感觉比较好的方案是GitHub仓库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub图床搭配又拍云CDN加速">
+<meta property="og:title" content="图床">
 <meta property="og:url" content="https://blog.pengfeima.cn/posts/27346/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="具体步骤  原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 xxx.github.io&#x2F;images&#x2F;xxx.png 访问这个仓库中的图片，现在通过自定义域名 images_0.example.com&#x2F;images&#x2F;xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可">
+<meta property="og:description" content="如果有人告诉你，谁家提供的图床服务速度快，稳定可靠，价格便宜，那一定是骗人的。我不会使用微博，因为他本来就不提供图床服务，后面图片访问不了了，求谁都没用。我也不会使用私人搭建的图床服务，提供类似服务的人一般都很善良，但是抵挡不住太多变数。我偏向于选择那些已经成立多年了的云服务商，虽然他们也会卷钱跑路，那种情况只能自认倒霉了。 图床需要云存储搭配CDN加速使用，个人感觉比较好的方案是GitHub仓库">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211231544344.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211231304598.png">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211647289.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211822833.png">
 <meta property="article:published_time" content="2022-11-23T05:16:21.000Z">
-<meta property="article:modified_time" content="2022-12-14T07:51:55.584Z">
+<meta property="article:modified_time" content="2022-12-14T15:33:52.943Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -120,13 +120,13 @@ p.small {
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://githubimages.pengfeima.cn/images/202211261944169.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">MerryJingle</div><div class="sub normal cap">快乐的铃铛</div><div class="sub hover cap" style="opacity:0"> Beautiful Mess</div></a></div>
 
-<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item active" href="/posts/">文章</a><a class="nav-item" href="/wiki/">知识库</a><a class="nav-item" href="/gallery/">相册</a></nav>
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item active" href="/posts/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">更多</a></nav>
 </header>
 
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">GitHub图床搭配又拍云CDN加速</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 具体步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">图床</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 具体步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
 
 
 
@@ -146,7 +146,20 @@ p.small {
 <div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-23T05:16:21.000Z">2022-11-23</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>GitHub图床搭配又拍云CDN加速</span></h1>
+<h1 class="article-title"><span>图床</span></h1>
+<p>如果有人告诉你，谁家提供的图床服务速度快，稳定可靠，价格便宜，那一定是骗人的。我不会使用微博，因为他本来就不提供图床服务，后面图片访问不了了，求谁都没用。我也不会使用私人搭建的图床服务，提供类似服务的人一般都很善良，但是抵挡不住太多变数。我偏向于选择那些已经成立多年了的云服务商，虽然他们也会卷钱跑路，那种情况只能自认倒霉了。</p>
+<p>图床需要云存储搭配CDN加速使用，个人感觉比较好的方案是GitHub仓库搭配又拍云CDN加速。</p>
+<span id="more"></span>
+<p>存储：</p>
+<ol>
+<li>GitHub(首选)</li>
+<li>七牛云</li>
+<li>又拍云<br />
+CDN加速：</li>
+<li>Cloudflare</li>
+<li>七牛云</li>
+<li>又拍云(首选)</li>
+</ol>
 <h2 id="具体步骤"><a class="markdownIt-Anchor" href="#具体步骤"></a> 具体步骤</h2>
 <blockquote>
 <p>原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 <a target="_blank" rel="noopener" href="http://xxx.github.io/images/xxx.png">xxx.github.io/images/xxx.png</a> 访问这个仓库中的图片，现在通过自定义域名 images_0.example.com/images/xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓库，例如images_1，images_2等等，绑定新的域名即可。以后如果不想用github图床，可以迁移，只要将域名和仓库相对应即可</p>
@@ -383,7 +396,7 @@ p.small {
       if (!path) {
         path = decodeURI(window.location.pathname);
       }
-      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":false,"locale":{"placeholder":null},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"],"lang":"zh-CN","wordLimit":0,"pageSize":5}, {
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"请留言。\n可匿名评论，填写邮箱可在被回复时收到邮件提醒，发件邮箱为 499908174@qq.com \n"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"],"lang":"zh-CN","wordLimit":0,"pageSize":5}, {
         el: '#waline_container',
         path: path,
       }));
