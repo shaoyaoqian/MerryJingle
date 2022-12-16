@@ -633,7 +633,7 @@ table:not([class]) {
   outline: none;
 }
 html {
-  font-family: LXGWWenKai-Regular, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: LXGW WenKai Screen, system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   font-size: 17px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
