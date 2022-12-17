@@ -28,7 +28,7 @@
   }
 }
 :root {
-  --site-bg: #f9fafb;
+  --site-bg: #fff;
   --card: #fff;
   --block: #f1f2f3;
   --block-border: #e3e5e8;
@@ -46,7 +46,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #1c1e21;
+    --site-bg: #131a0f;
     --card: #363d45;
     --block: #26292c;
     --block-border: #383d42;
@@ -124,7 +124,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: LXGW WenKai Screen, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
 }
 blockquote {
   display: block;
