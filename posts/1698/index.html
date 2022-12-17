@@ -20,24 +20,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>用 lightbox 实现灯箱效果 - MerryJingle</title>
+  <title>方便地在博客中发说说 - MerryJingle</title>
 
   
-    <meta name="description" content="灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="用 lightbox 实现灯箱效果">
-<meta property="og:url" content="https://blog.pengfeima.cn/posts/12277/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="方便地在博客中发说说">
+<meta property="og:url" content="https://blog.pengfeima.cn/posts/1698/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212141450187.png">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212141450940.png">
-<meta property="article:published_time" content="2022-11-06T05:23:00.000Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208239045-d8d9e4c8-0507-4701-8e6d-f4a696df3bb6.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208243727-a5ba4f6f-703c-41d0-a843-021a137fcdd2.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208220300-d7cf13ef-aa09-41e6-8adf-25fdde17ec1b.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208010029-ea0565a4-0195-4b6e-95b0-a0b51018ec13.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208005737-020b8057-addb-4baf-a223-a30ee6f14a0a.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208007132-a8454dd1-b939-4458-961b-854c9c586aa5.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208008916-0cf34ce5-895d-4a71-b935-690d90fa7bd6.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208009741-8c460fa2-cd69-4a54-b7b6-6296d16dc2ea.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208011770-6c99a7e6-bbea-4a01-b126-ffdaa0d2e2ed.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/115222128/208011866-97d6271c-daff-4434-8fd8-a453e214d52a.png">
+<meta property="article:published_time" content="2022-12-17T13:33:13.000Z">
 <meta property="article:modified_time" content="2022-12-17T14:17:23.590Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202212141450187.png">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/115222128/208239045-d8d9e4c8-0507-4701-8e6d-f4a696df3bb6.png">
 <meta name="twitter:creator" content="@mpf_npu">
   
   
@@ -115,7 +121,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">用 lightbox 实现灯箱效果</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown%E8%AF%AD%E8%A8%80%E4%B8%8Ehtml%E8%AF%AD%E8%A8%80"><span class="toc-text"> Markdown语言与html语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lightbox-%E6%8F%92%E4%BB%B6"><span class="toc-text"> Lightbox 插件</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">方便地在博客中发说说</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-text"> 特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81"><span class="toc-text"> 支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-text"> 快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85github-app"><span class="toc-text"> 安装GitHub App</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E6%B3%A8%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="toc-text"> 关注公众号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E4%BB%93%E5%BA%93"><span class="toc-text"> 绑定仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%AD%A3%E6%96%87%E4%B8%AD%E6%8F%92%E5%85%A5"><span class="toc-text"> 在博客正文中插入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92"><span class="toc-text"> 开发计划</span></a></li></ol></div></div></widget>
 
 
 
@@ -132,38 +138,108 @@ p.small {
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-06T05:23:00.000Z">2022-11-06</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-17T13:33:13.000Z">2022-12-17</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>用 lightbox 实现灯箱效果</span></h1>
-<p>灯箱效果是指，将图片放大弹出显示，并将背景变暗，以突出图片。具体到网页中，用户点击图片会弹出一个放大的图片窗口，原网页变暗成为背景。随着博主Javascript技能树逐渐点开，本站使用了功能更加强大的Fancybox，本文所述方案已经弃用，但作为博客早期的真实写照，本文还是留着吧。</p>
+<h1 class="article-title"><span>方便地在博客中发说说</span></h1>
+<!-- [issues-anywhere](https://github.com/shaoyaoqian/issues-anywhere)是我刚写的小项目。 -->
+<p> </p>
 <span id="more"></span>
-<h3 id="markdown语言与html语言"><a class="markdownIt-Anchor" href="#markdown语言与html语言"></a> Markdown语言与html语言</h3>
-<p>我们先要了解Markdown语言是怎么被解释成HTML语言。以下markdown语言</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">image-20221006234019929</span>](<span class="link">https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png</span>)图片</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">![<span class="string">image-20221006234019929</span>](<span class="link">https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png</span>)</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">small</span>&gt;</span></span>这是我保存在旧手机上的图片，2021年国庆，给老师做的PPT<span class="language-xml"><span class="tag">&lt;/<span class="name">small</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>分别会被解析成</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span>图片<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">small</span>&gt;</span>这是我保存在旧手机上的图片，2021年国庆，给老师做的PPT<span class="tag">&lt;/<span class="name">small</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如果图片后面不是文字，或者空了一行，那么会就会被解释成</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202210061555638.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;image-20221006234019929&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>总之，解析后的HTML代码中有一对<code>&lt;p&gt;&lt;/p&gt;</code>标签，它的内部包含了一个<code>&lt;img&gt;</code>标签，图片链接保存在<code>&lt;img&gt;</code>标签中，我们要思考的是怎么处理<code>&lt;img&gt;</code>标签。</p>
-<h3 id="lightbox-插件"><a class="markdownIt-Anchor" href="#lightbox-插件"></a> Lightbox 插件</h3>
-<p>我想要的效果是<a target="_blank" rel="noopener" href="https://lokeshdhakar.com/projects/lightbox2/#browser-support">Lightbox2 (lokeshdhakar.com)</a>，教程可以参考<a target="_blank" rel="noopener" href="https://christianspecht.de/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/">Generating an image gallery with Jekyll and Lightbox2</a>。简单来说，我们要给原来的<code>&lt;img&gt;</code>标签包上一对<code>&lt;a&gt;&lt;/a&gt;</code>标签，剩下的交给Lightbox插件来处理就行了。包装后的HTML文本如下所示：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211061407124.png&quot;</span> <span class="attr">data-lightbox</span>=<span class="string">&quot;example&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://raw.githubusercontent.com/mapengfei-nwpu/personal_pictures/main/typora_picgo/202211061407124.png&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>我们要在浏览器加载完成HTML文本后，用js脚本遍历所有满足选择器<code>img</code>的元素，给他包上<code>&lt;a&gt;&lt;/a&gt;</code>，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">add_lightbox</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">      $(<span class="string">&#x27;img&#x27;</span>).<span class="title function_">each</span>(</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">function</span>(<span class="params">index, val</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">          <span class="keyword">var</span> link = $(<span class="string">&#x27;&lt;a&gt;&lt;/a&gt;&#x27;</span>).<span class="title function_">attr</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;rel&#x27;</span>: <span class="string">&#x27;lightbox&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;href&#x27;</span>: $(val).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>),</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&#x27;data-lightbox&#x27;</span>:<span class="string">&quot;roadtrip&quot;</span></span></span><br><span class="line"><span class="language-javascript">          &#125;);</span></span><br><span class="line"><span class="language-javascript">        $(val).<span class="title function_">parent</span>().<span class="title function_">prepend</span>(link);</span></span><br><span class="line"><span class="language-javascript">        link.<span class="title function_">append</span>($(val));</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">      )</span></span><br><span class="line"><span class="language-javascript">    &#125;;</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>要在body元素上调用这个函数，<code>&lt;body onload=&quot;add_lightbox()&quot;&gt;</code>，表示文档加载完毕后才会执行这个脚本。</p>
-<p>修改后可以获得如下效果：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212141450187.png" alt="image-20221106140712923" /></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212141450940.png" alt="image-20221106150630189" /></p>
+<h3 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h3>
+<p>什么是IA(Issues Anywhere) Talk ？</p>
+<ul>
+<li>IA talk 利用手机微信发布碎片化思想，并同步至博客，基于GitHub Issues，无需任何后端服务。</li>
+</ul>
+<h3 id="特性"><a class="markdownIt-Anchor" href="#特性"></a> 特性</h3>
+<p>无论何时何地都能通过手机微信将消息发送至博客，支持文字、图片、视频，文本撰写可采用Markdown格式。当前为初步版本，后续功能请见开发计划</p>
+<h3 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h3>
+<img class="lazy" width="768" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208239045-d8d9e4c8-0507-4701-8e6d-f4a696df3bb6.png">
+<p>本项目实现了公众号服务器端的代码。详细内容参见我<a href="https://blog.pengfeima.cn/posts/14811/">博客</a>和 Hexo Stellar 主题下的<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/issues/199">讨论</a>。</p>
+<h3 id="支持"><a class="markdownIt-Anchor" href="#支持"></a> 支持</h3>
+<p>目前仅支持在 Hexo Stellar 主题使用，通过timeline插件将说说加入文档。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% timeline user:[用户名] api:https://api.github.com/repos/[用户名]/[仓库名]/issues %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208243727-a5ba4f6f-703c-41d0-a843-021a137fcdd2.png" alt="" /></p>
+<h3 id="快速开始"><a class="markdownIt-Anchor" href="#快速开始"></a> 快速开始</h3>
+<h4 id="安装github-app"><a class="markdownIt-Anchor" href="#安装github-app"></a> 安装GitHub App</h4>
+<p>新建一个GitHub仓库，安装应用<a target="_blank" rel="noopener" href="https://github.com/apps/wechat-to-issues">wechat-to-issues</a>，只授权你刚创建的仓库。<br />
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208220300-d7cf13ef-aa09-41e6-8adf-25fdde17ec1b.png" alt="" /></p>
+<h4 id="关注公众号"><a class="markdownIt-Anchor" href="#关注公众号"></a> 关注公众号</h4>
+<p>GitHub App 安装成功后，根据提示关注。</p>
+<h4 id="绑定仓库"><a class="markdownIt-Anchor" href="#绑定仓库"></a> 绑定仓库</h4>
+<p>然后再向公众号发送 di3a仓库名，前缀di3a是指令名。举个例子，我的仓库是blog，我就发送di3ablog，首尾不能有空格。</p>
+<h4 id="在博客正文中插入"><a class="markdownIt-Anchor" href="#在博客正文中插入"></a> 在博客正文中插入</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% timeline user:[用户名] api:https://api.github.com/repos/[用户名]/[仓库名]/issues %&#125;</span><br><span class="line">&#123;% endtimeline %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="开发计划"><a class="markdownIt-Anchor" href="#开发计划"></a> 开发计划</h3>
+<p>IA Talk 现在仍处于开发阶段，这里有一些目前还不支持、但已经在计划中的特性：</p>
+<ul>
+<li>暂无，欢迎提出建议。</li>
+</ul>
+<p>文档撰写参考了<a target="_blank" rel="noopener" href="https://bb.js.org/quick-start.html">BBTALK</a>，下面这些是草稿，先不要看。</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>📲随时发送<br />
+拿出手机即可发送碎片化思想，并同步博客显示。</p>
+<p>🤞使用方便<br />
+简略的 html 片段即可实现，且理论上支持任何框架或单独页面。</p>
+<p>🎁操作简单<br />
+微信端直接发送文字、图片、视频。</p>
+<p>🤖无需后台<br />
+有一个微信账号和一个GitHub账号即可使用功能。</p>
+<p>支持微信端文字及图片消息发送<br />
+当前为初步版本，后续功能请见开发计划</p>
+<pre><code>            # 流程：
+            # 登陆GitHub，提供 GitHub identity、username、access token
+            # 绑定微信，提供 wechat id
+            # 设置 issue_repository
+            # 设置 data_repository
+</code></pre>
+<p>使用方法：</p>
+<ol>
+<li>
+<p>点击下面这个链接，登陆你的GitHub账号，必须登陆使用，我必须以某个身份发issue。（其实匿名也可以，用我的身份发issue，可以吗？）<br />
+<a target="_blank" rel="noopener" href="https://github.com/login/oauth/authorize?client_id=Iv1.d5df482df1cd3635">https://github.com/login/oauth/authorize?client_id=Iv1.d5df482df1cd3635</a><br />
+<img class="lazy" width="486" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208010029-ea0565a4-0195-4b6e-95b0-a0b51018ec13.png"><br />
+<img class="lazy" width="740" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208005737-020b8057-addb-4baf-a223-a30ee6f14a0a.png"></p>
+</li>
+<li>
+<p>到微信公众号，将你的绑定这个GitHub账号<br />
+<img class="lazy" width="479" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208007132-a8454dd1-b939-4458-961b-854c9c586aa5.png"></p>
+</li>
+<li>
+<p>此时你往公众号发的消息将同步到公共仓库的issues中，不过你可以绑定你自己的仓库<br />
+<img class="lazy" width="480" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208008916-0cf34ce5-895d-4a71-b935-690d90fa7bd6.png"></p>
+</li>
+<li>
+<p>图片、视频、语音消息无法发送到公共仓库，必须要向app授权自己的仓库<br />
+<img class="lazy" width="473" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208009741-8c460fa2-cd69-4a54-b7b6-6296d16dc2ea.png"></p>
+</li>
+<li>
+<p>看效果<br />
+<a href="https://blog.pengfeima.cn/about/">https://blog.pengfeima.cn/about/</a></p>
+</li>
+</ol>
+<img class="lazy" width="489" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208011770-6c99a7e6-bbea-4a01-b126-ffdaa0d2e2ed.png">
+<img class="lazy" width="345" alt="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://user-images.githubusercontent.com/115222128/208011866-97d6271c-daff-4434-8fd8-a453e214d52a.png">
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/52166/">利用Github Action部署博客</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/17107/">CDN加速</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/58849/">如何写好GIT的提交信息</a></div></section></div>
 
 
 
