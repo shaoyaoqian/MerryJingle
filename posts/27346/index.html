@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2">
   <meta charset="utf-8">
   
 
@@ -30,19 +30,23 @@
 <meta property="og:site_name" content="MerryJingle">
 <meta property="og:description" content="如果有人告诉你，谁家提供的图床服务速度快，稳定可靠，价格便宜，那一定是骗人的。我不会使用微博，因为他本来就不提供图床服务，后面图片访问不了了，求谁都没用。我也不会使用私人搭建的图床服务，提供类似服务的人一般都很善良，但是抵挡不住太多变数。我偏向于选择那些已经成立多年了的云服务商，虽然他们也会卷钱跑路，那种情况只能自认倒霉了。 图床需要云存储搭配CDN加速使用，个人感觉比较好的方案是GitHub仓库">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212182318901.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211231544344.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211231304598.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211231311540.png">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212182336129.png">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212182337731.png">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212182325064.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211625795.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211631406.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211647289.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211211822833.png">
 <meta property="article:published_time" content="2022-11-23T05:16:21.000Z">
-<meta property="article:modified_time" content="2022-12-17T14:17:23.590Z">
+<meta property="article:modified_time" content="2022-12-19T05:57:12.007Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202211231544344.png">
+<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202212182318901.png">
 <meta name="twitter:creator" content="@mpf_npu">
   
   
@@ -120,7 +124,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">图床</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-text"> 具体步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">图床</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github%E5%9B%BE%E5%BA%8A"><span class="toc-text"> GitHub图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-github-pages-leftarrow-cdn-leftarrow-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text"> 1. GitHub Pages ←\leftarrow← CDN ←\leftarrow← 自定义域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-vercel-leftarrow-cdn-leftarrow-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text"> 2. Vercel ←\leftarrow← CDN ←\leftarrow← 自定义域名</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text"> 自定义域名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%BB%BA%E5%9B%BE%E5%BA%8A"><span class="toc-text"> 自建图床</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AE%97%E4%B8%8D%E7%AE%97%E6%BB%A5%E7%94%A8"><span class="toc-text"> 这算不算滥用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cdn%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text"> CDN服务的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E7%89%9B%E4%BA%91"><span class="toc-text"> 七牛云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cloudfare"><span class="toc-text"> Cloudfare</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%88%E6%8B%8D%E4%BA%91"><span class="toc-text"> 又拍云</span></a></li></ol></li></ol></div></div></widget>
 
 
 
@@ -154,10 +158,10 @@ CDN加速：</li>
 <li>七牛云</li>
 <li>又拍云(首选)</li>
 </ol>
-<h2 id="具体步骤"><a class="markdownIt-Anchor" href="#具体步骤"></a> 具体步骤</h2>
-<blockquote>
-<p>原理：将仓库发布为静态网页，可以绑定自定义域名，通过自定义域名加速。发布静态网页后可以通过 <a target="_blank" rel="noopener" href="http://xxx.github.io/images/xxx.png">xxx.github.io/images/xxx.png</a> 访问这个仓库中的图片，现在通过自定义域名 images_0.example.com/images/xxx.png 访问，将 images_0.example.com 做一下CDN加速，这样就能在国内快速访问这些资源了。如果一个仓库满了可以再建一个仓库，例如images_1，images_2等等，绑定新的域名即可。以后如果不想用github图床，可以迁移，只要将域名和仓库相对应即可</p>
-</blockquote>
+<h2 id="github图床"><a class="markdownIt-Anchor" href="#github图床"></a> GitHub图床</h2>
+<p>GitHub仓库中的资源可以通过域名<code>raw.githubusercontent.com</code>访问，但在国内访问此地址速度极慢。有四种方式可以访问GitHub图床。<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212182318901.png" alt="image-20221218231806704" /></p>
+<h2 id="1-github-pages-leftarrow-cdn-leftarrow-自定义域名"><a class="markdownIt-Anchor" href="#1-github-pages-leftarrow-cdn-leftarrow-自定义域名"></a> 1. GitHub Pages <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>←</mo></mrow><annotation encoding="application/x-tex">\leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">←</span></span></span></span> CDN <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>←</mo></mrow><annotation encoding="application/x-tex">\leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">←</span></span></span></span> 自定义域名</h2>
+<p>    使用 GitHub 提供的 GitHub Pages 服务，将仓库发布为静态网站，添加自定义域名，通过自定义域名加速。静态网站中的资源可以通过 <code>[username].github.io/[path]/[filename]</code> 获取，添加自定义域名后可以通过自定义域名 <code>[subdomain].[domain].com/[path]/[filename]</code> 获取。对域名 <code>[subdomain].[domain].com</code> 进行 CDN加速便能在国内快速访问这些资源。GitHub Pages 对仓库大小的限制为1G，但是我们可以创建多个仓库，每个仓库绑定新的子域名。GitHub仓库和子域名是一一对应的，未来将图床迁移出GitHub也非常方便。</p>
 <p>在个人设置中添加自定义域名</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211231544344.png" alt="image-20221123154404250" /></p>
 <p>新建仓库后，在仓库设置中开启Pages功能，并设置自定义域名</p>
@@ -165,6 +169,25 @@ CDN加速：</li>
 <p>在PicGo中设置自定义域名</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211231311540.png" alt="" /></p>
 <p>最后在又拍云中加速这个自定义域名</p>
+<h3 id="2-vercel-leftarrow-cdn-leftarrow-自定义域名"><a class="markdownIt-Anchor" href="#2-vercel-leftarrow-cdn-leftarrow-自定义域名"></a> 2. Vercel <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>←</mo></mrow><annotation encoding="application/x-tex">\leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">←</span></span></span></span> CDN <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>←</mo></mrow><annotation encoding="application/x-tex">\leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">←</span></span></span></span> 自定义域名</h3>
+<p>通过 Vercel 反向代理加速 GitHub 仓库中的文件(部署参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39010320/article/details/119923538">https://blog.csdn.net/qq_39010320/article/details/119923538</a> )。部署完成后，原 GitHub 仓库中的文件路径为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://raw.githubusercontent.com/shaoyaoqian/images-1/main/images/202211170920796.png</span><br><span class="line">https://raw.githubusercontent.com/&#123;owner&#125;/&#123;repository&#125;/&#123;branch&#125;/&#123;path&#125;/&#123;filename&#125;</span><br></pre></td></tr></table></figure>
+<p>可以通过 Vercel 反向代理的地址访问。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://images-1.vercel.app/images/202211170920796.png</span><br><span class="line">https://images-1.vercel.app/&#123;path&#125;/&#123;filename&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;routes&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span><span class="attr">&quot;src&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/(.*)&quot;</span><span class="punctuation">,</span><span class="attr">&quot;dest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://raw.githubusercontent.com/shaoyaoqian/images-1/main/$1&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="自定义域名"><a class="markdownIt-Anchor" href="#自定义域名"></a> 自定义域名</h4>
+<ol>
+<li>
+<p>在 Vercel 中设置</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212182336129.png" alt="image-20221218233621007" /></p>
+</li>
+<li>
+<p>在 Cloudflare 中设置</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212182337731.png" alt="image-20221218233718656" /></p>
+</li>
+</ol>
+<h2 id="自建图床"><a class="markdownIt-Anchor" href="#自建图床"></a> 自建图床</h2>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212182325064.png" alt="image-20221218232504925" /></p>
 <h2 id="这算不算滥用"><a class="markdownIt-Anchor" href="#这算不算滥用"></a> 这算不算滥用？</h2>
 <p>这个网站主要使用了GitHub提供的服务，因此我研究了一下他们的服务条款。</p>
 <p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/site-policy/github-terms/github-terms-for-additional-products-and-features">https://docs.github.com/cn/site-policy/github-terms/github-terms-for-additional-products-and-features</a></p>
@@ -314,8 +337,8 @@ CDN加速：</li>
       }
     }
   };
-  stellar.version = '1.18.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0';
+  stellar.version = '1.18.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -352,7 +375,7 @@ CDN加速：</li>
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8/swiper-bundle.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":"_small"});
+    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":null});
   }
   if ('' == 'true') {
     stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});

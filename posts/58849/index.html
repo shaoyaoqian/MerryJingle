@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2">
   <meta charset="utf-8">
   
 
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212171941462.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212171938261.png">
 <meta property="article:published_time" content="2022-12-17T11:52:26.000Z">
-<meta property="article:modified_time" content="2022-12-17T14:17:23.590Z">
+<meta property="article:modified_time" content="2022-12-19T05:57:12.007Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -115,7 +115,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">如何写好GIT的提交信息</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E4%B8%AA-commit-%E8%A7%84%E5%88%99"><span class="toc-text"> 10 个 Commit 规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commit-%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83"><span class="toc-text"> Commit 提交规范</span></a></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">如何写好GIT的提交信息</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E4%B8%AA-commit-%E8%A7%84%E5%88%99"><span class="toc-text"> 10 个 Commit 规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commit-%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83"><span class="toc-text"> Commit 提交规范</span></a></div></div></widget>
 
 
 
@@ -136,7 +136,7 @@ p.small {
 
 <article class='md-text content post'>
 <h1 class="article-title"><span>如何写好GIT的提交信息</span></h1>
-<div class="tag-plugin tabs" align="center"id="tab_1"><ul class="nav-tabs"><li class="tab active"><a href="#tab_1-1">糟糕的提交信息</a></li><li class="tab"><a href="#tab_1-2">清晰详细的提交信息</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171941462.png" alt="" /></p></div><div class="tab-pane" id="tab_1-2"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171938261.png" alt="" /></p></div></div></div> 
+<div class="tag-plugin tabs" align="center"id="tab_1"><div class="nav-tabs"><div class="tab active"><a href="#tab_1-1">糟糕的提交信息</a></div><div class="tab"><a href="#tab_1-2">清晰详细的提交信息</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171941462.png" alt="" /></p></div><div class="tab-pane" id="tab_1-2"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171938261.png" alt="" /></p></div></div></div> 
 <span id="more"></span>
 <h3 id="10-个-commit-规则"><a class="markdownIt-Anchor" href="#10-个-commit-规则"></a> 10 个 Commit 规则</h3>
 <ol>
@@ -359,8 +359,8 @@ p.small {
       }
     }
   };
-  stellar.version = '1.18.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0';
+  stellar.version = '1.18.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -397,7 +397,7 @@ p.small {
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8/swiper-bundle.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":"_small"});
+    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":null});
   }
   if ('' == 'true') {
     stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});

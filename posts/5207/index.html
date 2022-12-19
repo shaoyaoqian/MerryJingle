@@ -3,7 +3,7 @@
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2">
   <meta charset="utf-8">
   
 
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211181241586.png">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202211181232236.png">
 <meta property="article:published_time" content="2022-11-18T03:52:05.000Z">
-<meta property="article:modified_time" content="2022-12-17T14:17:23.590Z">
+<meta property="article:modified_time" content="2022-12-19T05:57:12.007Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary_large_image">
@@ -117,7 +117,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">在Stellar主题中使用数学公式</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8mathjax%E6%8F%92%E4%BB%B6"><span class="toc-text"> 启用Mathjax插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98"><span class="toc-text"> 存在问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3"><span class="toc-text"> 问题的解决</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">在Stellar主题中使用数学公式</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8mathjax%E6%8F%92%E4%BB%B6"><span class="toc-text"> 启用Mathjax插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%9C%A8%E9%97%AE%E9%A2%98"><span class="toc-text"> 存在问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3"><span class="toc-text"> 问题的解决</span></a></li></ol></div></div></widget>
 
 
 
@@ -150,7 +150,7 @@ p.small {
 <p>因为hexo-renderer-pandoc依赖于Pandoc，我们还要在电脑上安装pandoc，我用的是MacOS，可以通过homebrew安装，安装好后，重新生成一下就好了。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install pandoc</span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo serve</span><br></pre></td></tr></table></figure>
 <p>现在我们能看到全部公式了，以下分别是hexo-renderer-marked和hexo-renderer-pandoc的显示效果。</p>
-<div class="tag-plugin tabs" align="center"id="tab_2"><ul class="nav-tabs"><li class="tab active"><a href="#tab_2-1">hexo-renderer-marked</a></li><li class="tab"><a href="#tab_2-2">hexo-renderer-pandoc</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181211095.png" alt="" /></p></div><div class="tab-pane" id="tab_2-2"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181210046.png" alt="" /></p></div></div></div>
+<div class="tag-plugin tabs" align="center"id="tab_2"><div class="nav-tabs"><div class="tab active"><a href="#tab_2-1">hexo-renderer-marked</a></div><div class="tab"><a href="#tab_2-2">hexo-renderer-pandoc</a></div></div><div class="tab-content"><div class="tab-pane active" id="tab_2-1"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181211095.png" alt="" /></p></div><div class="tab-pane" id="tab_2-2"><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211181210046.png" alt="" /></p></div></div></div>
 <p>最后，因为hexo-renderer-pandoc依赖Pandoc，如果要通过GitHub Action发布，那么需要在yml文件中添加：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在step下面加上</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Pandoc</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      wget https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb</span></span><br><span class="line"><span class="string">      sudo dpkg -i pandoc-2.7.2-1-amd64.deb</span></span><br><span class="line"><span class="string"></span><span class="comment"># Other steps</span></span><br><span class="line"><span class="comment"># ......</span></span><br></pre></td></tr></table></figure>
 <h2 id="存在问题"><a class="markdownIt-Anchor" href="#存在问题"></a> 存在问题</h2>
@@ -294,8 +294,8 @@ p.small {
       }
     }
   };
-  stellar.version = '1.18.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0';
+  stellar.version = '1.18.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.2';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -332,7 +332,7 @@ p.small {
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8/swiper-bundle.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":"_small"});
+    stellar.plugins.gallery = Object.assign({"enable":true,"thumbnail_suffix":null});
   }
   if ('' == 'true') {
     stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
