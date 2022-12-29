@@ -109,7 +109,7 @@ p.small {
 <div class="widgets">
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/28076/"><span class="title">什么是无症状感染者</span></a><a class="item title" href="/posts/56449/"><span class="title">使用人工智能ChatGPT写检讨</span></a><a class="item title" href="/posts/15648/"><span class="title">图片功能测试</span></a><a class="item title" href="/posts/55449/"><span class="title">增加相册页面</span></a><a class="item title" href="/posts/58849/"><span class="title">如何写好GIT的提交信息</span></a></div></widget>
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/28076/"><span class="title">无症状感染者</span></a><a class="item title" href="/posts/56449/"><span class="title">使用人工智能ChatGPT写检讨</span></a><a class="item title" href="/posts/15648/"><span class="title">图片功能测试</span></a><a class="item title" href="/posts/55449/"><span class="title">增加相册页面</span></a><a class="item title" href="/posts/58849/"><span class="title">如何写好GIT的提交信息</span></a></div></widget>
 
 
 </div>
@@ -131,7 +131,18 @@ p.small {
 
 <div class="nav-wrap"><nav class="sub post cap"><a class="active" href="/posts">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
 
-  <div class="post-list post"><a class="post-card post " href="/posts/26834/">
+  <div class="post-list post"><a class="post-card post " href="/posts/14811/">
+<article class="md-text"><h2 class="post-title"><div href="/posts/14811/">通过微信公众号在博客中发布动态</div></h2><div class="excerpt"><p><p>Stellar主题支持动态说说的功能。博主可以在仓库下面创建GitHub Issues，用户在浏览页面时，浏览器会通过JS脚本从GitHub拉取动态数据，呈现在页面中。但是博主每次发说说都要登陆GitHub，新建一个issue，在移动设备上完成这些操作不太方便。</p>
+<p>我最初的想法是，通过微信公众号后台服务器发布GitHub Issues。博主只需在移动设备上的微信应用里发说说，公众号后台可以使用GitHub Token调用GitHub API发布issue，这样极大地简化了发布流程。但是一个GitHub Token代表着一位博主的身份，如果很多博主都希望能够使用这个微信公众号发说说，那么他们都要将自己的GitHub Token上传到公众号后台，这种做法不太安全。</p>
+<p>Xaoxuu的想法是，我们可以开发一个GitHub Integration，博主安装这个应用的同时会授予它权限。完成授权后，应用后台会通过密钥定期调用GitHub API 获取用户的 access token。这样能让一个微信公众号安全地为多个博主提供发布动态说说的功能。</p>
+<p>这个项目有大量工作要做：</p>
+<ul>
+<li>媒体文件需要从微信服务器下载并上传到第三方服务器保存</li>
+<li>走通 GitHub Integration 获取 access token 的流程</li>
+<li>将微信用户ID和GitHub用户账号对应起来</li>
+<li>调用 GitHub API 发布 GitHub Issues</li>
+</ul></p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-12-03T10:02:34.000Z">2022-12-03</time></span></div></article>
+</a><a class="post-card post " href="/posts/26834/">
 <article class="md-text"><h2 class="post-title"><div href="/posts/26834/">首次为开源项目提交代码</div></h2><div class="excerpt"><p><p>将自己的代码提交到他人的仓库中</p></p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-12-01T12:27:16.000Z">2022-12-01</time></span><span class="cap breadcrumb" style="color:#f44336">技术基础</span></div></article>
 </a><a class="post-card post " href="/posts/55132/">
 <article class="md-text"><h2 class="post-title"><div href="/posts/55132/">CFD问题中的稳定性分析</div></h2><div class="excerpt"><p><p>    长期以来，在网上一直能看到这样的论断：因为有限元方法不能使用迎风格式，所以求解CFD问题时会遇到稳定性问题。对此我很困惑，我困惑的是他们为什么要纠结显格式的稳定性问题，用隐格式或半隐格式就是无条件稳定的呀。例如下面这个数值格式</p>
@@ -152,8 +163,6 @@ p.small {
 <div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211282020011.webp"/><div class="cover-info"style="color:white"position="top"><div class="cap">方便国内用户访问搭建在国外服务器上的网站</div><div class="title">CDN加速</div></div></div>
 </a><a class="post-card post photo " href="/posts/62627/">
 <div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211180032457.jpeg"/><div class="cover-info"style="color:white"position="top"><div class="cap"> </div><div class="title">ubuntu系统配置clash代理服务</div><div class="cap">方便国内用户访问搭建在国外服务器上的服务</div></div></div>
-</a><a class="post-card post photo " href="/posts/20229/">
-<div class="cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202211180033325.jpeg"/><div class="cover-info"style="color:white"position="top"><div class="cap"> </div><div class="title">用beamer做演示稿</div></div></div>
 </a></div>
   
   <div class='paginator-wrap dis-select'>
