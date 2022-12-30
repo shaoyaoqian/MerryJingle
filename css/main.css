@@ -46,7 +46,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #131a0f;
+    --site-bg: #141414;
     --card: #373d43;
     --block: #26292c;
     --block-border: #383d42;
