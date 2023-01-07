@@ -3159,7 +3159,7 @@ details.folding[child=iframe] >div.body {
   -o-transition: background 0.2s ease-out, height 0.2s ease-out, top 0.2s ease-out, transform 0.2s ease-out;
   transform: scale(2);
 }
-.tag-plugin.timeline .retweeted-body {
+.tag-plugin.timeline .retweeted {
   background: var(--block-hover);
   border-top-left-radius: 2px;
   padding: 0.5rem 1rem;
