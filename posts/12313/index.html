@@ -20,24 +20,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>如何写好GIT的提交信息 - MerryJingle</title>
+  <title>备份微博 - MerryJingle</title>
 
   
-    <meta name="description" content="糟糕的提交信息清晰详细的提交信">
+    <meta name="description" content="定期爬取指定用户的微博，将所有信息保存在GitHub仓库中，并在博客中展示。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何写好GIT的提交信息">
-<meta property="og:url" content="https://blog.pengfeima.cn/posts/58849/index.html">
+<meta property="og:title" content="备份微博">
+<meta property="og:url" content="https://blog.pengfeima.cn/posts/12313/index.html">
 <meta property="og:site_name" content="MerryJingle">
-<meta property="og:description" content="糟糕的提交信息清晰详细的提交信">
+<meta property="og:description" content="定期爬取指定用户的微博，将所有信息保存在GitHub仓库中，并在博客中展示。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212171941462.png">
-<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212171938261.png">
-<meta property="article:published_time" content="2022-12-17T11:52:26.000Z">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101255577.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101255944.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225403.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225401.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101227641.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101226059.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101227458.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225777.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225040.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225622.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225822.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101226593.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225399.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101226070.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101225668.jpg">
+<meta property="og:image" content="https://githubimages.pengfeima.cn/images/202301101227042.jpg">
+<meta property="article:published_time" content="2023-01-10T04:29:13.000Z">
 <meta property="article:modified_time" content="2023-01-10T11:34:07.993Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202212171941462.png">
+<meta name="twitter:image" content="https://githubimages.pengfeima.cn/images/202301101255577.jpg">
 <meta name="twitter:creator" content="@mpf_npu">
   
   
@@ -107,7 +121,7 @@ p.small {
 
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">如何写好GIT的提交信息</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E4%B8%AA-commit-%E8%A7%84%E5%88%99"><span class="toc-text"> 10 个 Commit 规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commit-%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83"><span class="toc-text"> Commit 提交规范</span></a></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">备份微博</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-text"> 效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text"> 使用方法</span></a></li></ol></div></div></widget>
 
 
 
@@ -124,112 +138,24 @@ p.small {
       
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-12-17T11:52:26.000Z">2022-12-17</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/posts">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-01-10T04:29:13.000Z">2023-01-10</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>如何写好GIT的提交信息</span></h1>
-<div class="tag-plugin grid" ><div class="cell" index="0"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171941462.png" alt="糟糕的提交信息" fancybox="true" style="height:200px;"/></div><div class="image-meta"><span class="image-caption center">糟糕的提交信息</span></div></div></div><div class="cell" index="1"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202212171938261.png" alt="清晰详细的提交信" fancybox="true" style="height:200px;"/></div><div class="image-meta"><span class="image-caption center">清晰详细的提交信</span></div></div></div></div> 
+<h1 class="article-title"><span>备份微博</span></h1>
+<p>定期爬取指定用户的微博，将所有信息保存在GitHub仓库中，并在博客中展示。</p>
 <span id="more"></span>
-<h3 id="10-个-commit-规则"><a class="markdownIt-Anchor" href="#10-个-commit-规则"></a> 10 个 Commit 规则</h3>
-<ol>
-<li>
-<p>提交消息由 Header (<strong>主题</strong>)、Body(<strong>详细描述</strong>) 和 Footer (<strong>脚注</strong>)组成，Body 和 Footer 都是可选的。</p>
-</li>
-<li>
-<p>将 Header 行 限制为 50 个字符。</p>
-<ul>
-<li>
-<p>主题是最能总结提交中所做更改的一行。</p>
-</li>
-<li>
-<p>总结提交的行为在任何版本控制系统中都是一种固有的好习惯。它可以帮助其他人（或后来的您）更快地找到相关的提交。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>将主题行的第一个字母大写。</p>
-</li>
-<li>
-<p>不要在主题行的末尾加上句点 (<code>.</code>)。</p>
-</li>
-<li>
-<p>在 Header 和 Body 以及 Footer 之间放置一个空行。</p>
-<ul>
-<li>将 Header 与 Body 分开的空行很重要（除非您完全省略正文）Footer 也应通过空行与正文分开。</li>
-</ul>
-</li>
-<li>
-<p>Body 的行宽不要超过 72 个字符处。</p>
-<ul>
-<li>Body 用于提供有关 commmit 中所做更改的更多详细信息。</li>
-</ul>
-</li>
-<li>
-<p>用项目任务号写commit 的 Body（可选）。</p>
-<ul>
-<li>以项目任务号编写时，提交主体看起来很干净。</li>
-</ul>
-</li>
-<li>
-<p>使用祈使语气</p>
-<ul>
-<li>示例：Add 而不是 Added， Fix 而不是 Fixed, Fixes → 主题行使用现在时命令式，正文使用现在时态</li>
-</ul>
-</li>
-<li>
-<p>描述&quot;什么&quot;和&quot;为什么&quot;，但不描述&quot;如何&quot;。</p>
-<ul>
-<li>
-<p>可以提及更改了哪个组件。</p>
-</li>
-<li>
-<p>只关注目的，而不是实现。</p>
-</li>
-<li>
-<p>大多数现代错误跟踪和项目管理系统都提供了与源代码控制存储库的集成，但即使它们没有集成，你仍然可以在提交消息放上 task/ticket 编号。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>在 Footer 中 包含 ticket 号或者 issue no.（如果有的话）。</p>
-<ul>
-<li>Footer 位于 Body 正下方，是引用与提交更改相关的问题的地方。如在 GitHub 中的 issue no.，JIRA 中的 ticket 号。</li>
-</ul>
-</li>
-</ol>
-<h2 id="commit-提交规范"><a class="markdownIt-Anchor" href="#commit-提交规范"></a> <strong>Commit 提交规范</strong></h2>
-<p>除了上面介绍这10个基本commit message 规则。很多开源项目会在CONTRIBUTING 中说明它们采用的commit message格式，大同小异。Angular团队推出的conventional-changelog 最为有名，使用最广泛 <a target="_blank" rel="noopener" href="http://suo.im/4rsYee%E3%80%82">http://suo.im/4rsYee。</a></p>
-<p>Commit message 包括三个部分：Header，Body 和 Footer。完整格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</span><br><span class="line">// 空一行</span><br><span class="line">&lt;body&gt;</span><br><span class="line">// 空一行</span><br><span class="line">&lt;footer&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>1) type</strong></p>
-<p>提交 commit 的类型，包括以下几种</p>
-<p>- feat: 新功能</p>
-<p>- fix: 修复问题</p>
-<p>- docs: 修改文档</p>
-<p>- style: 修改代码格式，不影响代码逻辑</p>
-<p>- refactor: 重构代码，理论上不影响现有功能</p>
-<p>- perf: 提升性能</p>
-<p>- test: 增加修改测试用例</p>
-<p>- chore: 修改工具相关（包括但不限于文档、代码生成等）</p>
-<p><strong>2) scope</strong></p>
-<p>修改文件的范围，比如：视图层、控制层、docs、config, plugin</p>
-<p><strong>3) subject</strong></p>
-<p>- subject 是 commit 目的的简短描述（用一句话清楚的描述这次提交做了什么），不超过50个字符</p>
-<p><strong>4) body</strong></p>
-<p>- 补充 subject 添加详细说明，可以分成多行，适当增加原因、目的等相关因素，也可不写</p>
-<p><strong>5 ) footer</strong></p>
-<p>- 当有非兼容修改(Breaking Change)时必须在这里描述清楚</p>
-<p>- 关闭issue或是链接到相关文档，如 Closes #1, Closes #2, #3</p>
-<p>摘录自：</p>
-<p><a target="_blank" rel="noopener" href="https://jishuin.proginn.com/p/763bfbd6fe8c">如何写好 commit message</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU0OTE3MjE1Mw==&amp;mid=2247484507&amp;idx=1&amp;sn=d4700fe7c882cc5837255e3a0fbbe5af&amp;chksm=fbb2a28dccc52b9ba9003068a98a2ae2060e61a0804924f3c56693d300b928efba35ee48c11f&amp;scene=21#wechat_redirect">更优雅的使用Git</a></p>
+<!-- color: red/orange/yellow/green/cyan/blue/purple/light/dark -->
+<h2 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h2>
+<div class="tag-plugin grid" ><div class="cell" index="0"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202301101255577.jpg" alt="原始微博" fancybox="true" style="height:200px;"/></div><div class="image-meta"><span class="image-caption center">原始微博</span></div></div></div><div class="cell" index="1"><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://githubimages.pengfeima.cn/images/202301101255944.jpg" alt="备份微博" fancybox="true" style="height:200px;"/></div><div class="image-meta"><span class="image-caption center">备份微博</span></div></div></div></div> 
+<h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h2>
+<div class="tag-plugin note" color="light"><div class="body"><div id="nh3llfk7ype" class="justified-gallery gallery"><a data-fancybox="nh3llfk7ype" data-caption="创建仓库" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225403.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225403.jpg" alt="创建仓库" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="设置Actions对仓库的读写权限" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225401.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225401.jpg" alt="设置Actions对仓库的读写权限" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="点击&quot;Set up in Desktop&quot;，将仓库用GitHub Desktop打开" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101227641.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101227641.jpg" alt="点击&quot;Set up in Desktop&quot;，将仓库用GitHub Desktop打开" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="点击&quot;Set up in Desktop&quot;，将仓库用GitHub Desktop打开" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101226059.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101226059.jpg" alt="点击&quot;Set up in Desktop&quot;，将仓库用GitHub Desktop打开" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="下载并复制仓库&quot;mfmpf/weibo-wuqingfeng&quot;中main分支的代码" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101227458.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101227458.jpg" alt="下载并复制仓库&quot;mfmpf/weibo-wuqingfeng&quot;中main分支的代码" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="删除dump.rdb文件，打开main.yml文件" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225777.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225777.jpg" alt="删除dump.rdb文件，打开main.yml文件" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="修改微博ID" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225040.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225040.jpg" alt="修改微博ID" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="点击Commit to main提交代码" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225622.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225622.jpg" alt="点击Commit to main提交代码" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="创建output分支" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225822.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225822.jpg" alt="创建output分支" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="publish output分支再publish main分支" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101226593.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101226593.jpg" alt="publish output分支再publish main分支" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="publish output分支再publish main分支" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225399.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225399.jpg" alt="publish output分支再publish main分支" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="推送以后Actions自动运行" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101226070.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101226070.jpg" alt="推送以后Actions自动运行" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="运行成功" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101225668.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101225668.jpg" alt="运行成功" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a data-fancybox="nh3llfk7ype" data-caption="运行产生的文件" target="_blank" rel="noopener" href="https://githubimages.pengfeima.cn/images/202301101227042.jpg"><img no-lazy src="https://githubimages.pengfeima.cn/images/202301101227042.jpg" alt="运行产生的文件" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a></div></div></div>
 
 
 
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/1698/">博客中的说说</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/56449/">使用人工智能ChatGPT写检讨</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/2794/">微博</a></div></section></div>
 
 
 
