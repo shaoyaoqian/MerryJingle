@@ -2293,7 +2293,7 @@ details.folding[child=iframe] >div.body {
 }
 .tag-plugin.image .image-bg {
   text-align: center;
-  border-radius: 6px;
+  border-radius: 0px;
   position: relative;
   overflow: hidden;
 }
@@ -4836,7 +4836,7 @@ h1.article-title {
   margin: var(--gap-p) 0;
 }
 .md-text img {
-  border-radius: 6px;
+  border-radius: 0px;
   margin: auto;
   display: block;
 }
