@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='zh-CN'>
+<html lang='zh-CN' data-theme="dark">
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
@@ -32,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://githubimages.pengfeima.cn/images/202212132125669.png">
 <meta property="article:published_time" content="2022-12-12T14:10:31.000Z">
-<meta property="article:modified_time" content="2023-01-18T08:20:45.326Z">
+<meta property="article:modified_time" content="2023-01-22T03:04:02.370Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="一些关键词">
 <meta name="twitter:card" content="summary">
@@ -190,7 +190,7 @@ body {
 <h4 id="欢迎提出建议"><a class="markdownIt-Anchor" href="#欢迎提出建议"></a> 欢迎提出建议</h4>
 
 
-
+<div class="article-footer reveal fs14"><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://blog.pengfeima.cn/posts/55449/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><center><i class="fa-brands fa-weixin fa-fw"></i></center></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://blog.pengfeima.cn/posts/55449/&title=相册页面 - MerryJingle&summary=    我想做一个相册，但是我不知道什么样的相册比较美观，于是参考了一些论坛和博客。首先是Discourse的一款插件Tiles Image Gallery，然后是Volantis的gallery标签，频率的博客以及瀑布流的教程，Ro..."><center><i class="fa-brands fa-weibo fa-fw"></i></center></a><a class="social share-item email" href="mailto:?subject=相册页面 - MerryJingle&amp;body=https://blog.pengfeima.cn/posts/55449/"><center><i class="fa-regular fa-envelope"></i></center></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><center><i class="fa-solid fa-link"></i></center></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://blog.pengfeima.cn/posts/55449/"/></div></div></section></div>
 
 </article>
 
@@ -202,6 +202,7 @@ body {
 
 
   <div class='related-wrap md-text reveal' id="comments">
+    <div class="tag-plugin note">
     <section class='header cmt-title cap theme'>
       快来参与讨论吧
     </section>
@@ -211,6 +212,7 @@ body {
 <div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
 
     </section>
+    </div>
   </div>
 
 
@@ -405,10 +407,9 @@ body {
       if (!path) {
         path = decodeURI(window.location.pathname);
       }
-      Waline.init(Object.assign({"js":"https://cdn.staticfile.org/waline/2.14.4/waline.min.js","css":"https://cdn.staticfile.org/waline/2.14.4/waline.min.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"请留言，可匿名评论。\n填写邮箱可在被回复时收到邮件提醒，发件邮箱为 499908174@qq.com 。\n"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"],"lang":"zh-CN","wordLimit":0,"pageSize":5,"imageUploader":{"fileName":"image","tokenName":"token","api":"https://img.ink/api/upload","token":"7aebca24b8ba799d3b9a4a71b3e2e8fc","resp":"data.url"}}, {
+      Waline.init(Object.assign({"js":"https://cdn.staticfile.org/waline/2.14.4/waline.min.js","css":"https://cdn.staticfile.org/waline/2.14.4/waline.min.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":true,"locale":{"placeholder":"请留言，可匿名评论。\n填写邮箱可在被回复时收到邮件提醒，发件邮箱为 499908174@qq.com 。\n"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs","https://unpkg.com/@waline/emojis@1.1.0/weibo","https://unpkg.com/@waline/emojis@1.1.0/bilibili","https://unpkg.com/@waline/emojis@1.1.0/alus","https://unpkg.com/@waline/emojis@1.1.0/bilibili","https://unpkg.com/@waline/emojis@1.1.0/qq","https://unpkg.com/@waline/emojis@1.1.0/tieba","https://unpkg.com/@waline/emojis@1.1.0/tw-emoji","https://unpkg.com/@waline/emojis@1.1.0/bmoji"],"lang":"zh-CN","wordLimit":0,"reaction":["/img/blobs/ablobcatheart.png","/img/blobs/ablobcatattentionreverse.png","/img/blobs/ablobcatrainbow.png","/img/blobs/blobcatsaitama.png","/img/blobs/blobcatflip.png"],"pageSize":5,"imageUploader":{"fileName":"image","tokenName":"token","api":"https://img.ink/api/upload","token":"7aebca24b8ba799d3b9a4a71b3e2e8fc","resp":"data.url"}}, {
         el: '#waline_container',
         path: path,
-        pageview: true,
         
           imageUploader: function(file) {
             let headers = new Headers();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='zh-CN'>
+<html lang='zh-CN' data-theme="dark">
 
 <head>
   <meta name="generator" content="Hexo 6.3.0">
@@ -31,7 +31,7 @@
 <meta property="og:description" content="这是加密内容，需要密码才能继续阅读">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-20T15:40:00.000Z">
-<meta property="article:modified_time" content="2023-01-18T08:20:45.322Z">
+<meta property="article:modified_time" content="2023-01-22T03:04:02.370Z">
 <meta property="article:author" content="MerryJingle">
 <meta property="article:tag" content="加密">
 <meta property="article:tag" content="公众号">
@@ -135,7 +135,7 @@ body {
 
 
 
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/47683/"><span class="title">青铜骑士</span></a><a class="item title" href="/posts/17107/"><span class="title">CDN加速</span></a><a class="item title" href="/posts/52166/"><span class="title">利用Github Action部署博客</span></a><a class="item title" href="/posts/1698/"><span class="title">博客中的说说</span></a><a class="item title" href="/posts/27346/"><span class="title">图床</span></a></div></widget>
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/posts/47683/"><span class="title">青铜骑士</span></a><a class="item title" href="/posts/14811/"><span class="title">通过微信公众号在博客中发布动态</span></a><a class="item title" href="/posts/63539/"><span class="title">音乐插件</span></a><a class="item title" href="/posts/5481/"><span class="title">🏃留下跑步的脚印</span></a><a class="item title" href="/posts/28076/"><span class="title">无症状感染者</span></a></div></widget>
 
 
 
@@ -170,7 +170,7 @@ body {
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
 
-
+<div class="article-footer reveal fs14"><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://blog.pengfeima.cn/posts/18603/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><center><i class="fa-brands fa-weixin fa-fw"></i></center></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://blog.pengfeima.cn/posts/18603/&title=有一天 - MerryJingle&summary=这是加密内容，需要密码才能继续阅读"><center><i class="fa-brands fa-weibo fa-fw"></i></center></a><a class="social share-item email" href="mailto:?subject=有一天 - MerryJingle&amp;body=https://blog.pengfeima.cn/posts/18603/"><center><i class="fa-regular fa-envelope"></i></center></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><center><i class="fa-solid fa-link"></i></center></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://blog.pengfeima.cn/posts/18603/"/></div></div></section></div>
 
 </article>
 
@@ -373,10 +373,9 @@ body {
       if (!path) {
         path = decodeURI(window.location.pathname);
       }
-      Waline.init(Object.assign({"js":"https://cdn.staticfile.org/waline/2.14.4/waline.min.js","css":"https://cdn.staticfile.org/waline/2.14.4/waline.min.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":false,"locale":{"placeholder":"请留言，可匿名评论。\n填写邮箱可在被回复时收到邮件提醒，发件邮箱为 499908174@qq.com 。\n"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"],"lang":"zh-CN","wordLimit":0,"pageSize":5,"imageUploader":{"fileName":"image","tokenName":"token","api":"https://img.ink/api/upload","token":"7aebca24b8ba799d3b9a4a71b3e2e8fc","resp":"data.url"}}, {
+      Waline.init(Object.assign({"js":"https://cdn.staticfile.org/waline/2.14.4/waline.min.js","css":"https://cdn.staticfile.org/waline/2.14.4/waline.min.css","serverURL":"https://waline.pengfeima.cn","commentCount":true,"pageview":true,"locale":{"placeholder":"请留言，可匿名评论。\n填写邮箱可在被回复时收到邮件提醒，发件邮箱为 499908174@qq.com 。\n"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs","https://unpkg.com/@waline/emojis@1.1.0/weibo","https://unpkg.com/@waline/emojis@1.1.0/bilibili","https://unpkg.com/@waline/emojis@1.1.0/alus","https://unpkg.com/@waline/emojis@1.1.0/bilibili","https://unpkg.com/@waline/emojis@1.1.0/qq","https://unpkg.com/@waline/emojis@1.1.0/tieba","https://unpkg.com/@waline/emojis@1.1.0/tw-emoji","https://unpkg.com/@waline/emojis@1.1.0/bmoji"],"lang":"zh-CN","wordLimit":0,"reaction":["/img/blobs/ablobcatheart.png","/img/blobs/ablobcatattentionreverse.png","/img/blobs/ablobcatrainbow.png","/img/blobs/blobcatsaitama.png","/img/blobs/blobcatflip.png"],"pageSize":5,"imageUploader":{"fileName":"image","tokenName":"token","api":"https://img.ink/api/upload","token":"7aebca24b8ba799d3b9a4a71b3e2e8fc","resp":"data.url"}}, {
         el: '#waline_container',
         path: path,
-        pageview: true,
         
           imageUploader: function(file) {
             let headers = new Headers();
